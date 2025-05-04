@@ -1,0 +1,306 @@
+.signup-modal-overlay,
+.reg-modal-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+.signup-modal-overlay,
+.login-modal-overlay {
+  display: none; /* Hide by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+
+
+.signup-modal-box,
+.reg-modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 757px;
+  border-radius: 24px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  display: flex;
+  overflow: hidden;
+}
+.signup-modal-box,
+.login-modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 757px;
+  border-radius: 24px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  display: flex;
+  overflow: hidden;
+}
+  /* Close icon: top-right corner inside the box */
+  .modal-close-icon {
+    position: absolute;
+    top: 17px;
+    right: 17px; /* ~947px from left if needed, but simpler to do from right */
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 10000; 
+    pointer-events: auto; 
+  }
+  
+  /* Left side: 500×757 with image + gradient overlay */
+  .signup-modal-left {
+    position: relative;
+    width: 500px;
+    height: 757px;
+    overflow: hidden;
+  }
+  
+  /* The background image covers left side fully */
+  .signup-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* The gradient overlay with backdrop blur, 
+     from your prompt: 
+     background: linear-gradient(360deg, rgba(30, 45, 64, 0.32) -9.74%, rgba(78, 116, 166, 0) 116.11%);
+  */
+  .signup-left-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 757px;
+    background: linear-gradient(
+      360deg,
+      rgba(30, 45, 64, 0.32) -9.74%, 
+      rgba(78, 116, 166, 0) 116.11%
+    );
+    backdrop-filter: blur(4px);
+  }
+  
+  /* The text at bottom or center in left side */
+  .left-caption {
+    position: absolute;
+    bottom: 160px;  /* increased from 80px to move text up */
+    left: 30px;
+    right: 30px;
+    color: #fff;
+    text-align: center;  /* center the text horizontally */
+  }
+  
+  .caption-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 0 30px;
+  }
+  .caption-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  /* Right side: 500×757 for the signup form */
+  .signup-modal-right {
+    width: 500px;
+    height: 757px;
+    padding: 80px 50px; /* adjust as needed */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 999;
+  }
+  
+  /* TourMate Logo (235×39) near top */
+  .tourmate-logo {
+    width: 235px; /* or auto if you prefer exact size from SVG */
+    height: auto;
+  }
+  
+  /* Title: "Regístrate" */
+  .signup-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 160%;
+    color: #000;
+    margin: 0;
+  }
+  
+  /* Subtitle: "Empecemos con TourMate" */
+  .signup-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+    color: #000;
+  }
+  
+  /* Email field container */
+  .email-field {
+    margin-top: 86px;
+    position: relative;
+  }
+  .email-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 20px; 
+    height: 20px;
+  }
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.reg-input {
+  width: 100%;
+  padding-right: 40px; /* Prevents text from overlapping with the icon */
+}
+
+.hide-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer; /* Makes it clickable if used for toggle */
+}
+
+  
+  /* The input (406×56, 8px radius, etc.) */
+  .signup-input {
+    width: 406px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #79747E;
+    padding-left: 40px; /* to accommodate the icon */
+    padding-right: 12px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .reg-input{
+    width: 406px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #79747E;
+    padding-left: 12px; /* to accommodate the icon */
+    padding-right: 12px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  /* Button (406×47) */
+  .btn-signup {
+    width: 406px;
+    height: 47px;
+    border: none;
+    border-radius: 100px;
+    background-color: #2C6DFB;
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 24px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* "or continue with" text */
+  .or-continue-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+    margin-top: 44px;
+    text-align: center; /* centers the text */
+  }
+  
+  .social-row {
+    justify-content: center; /* centers the icons horizontally */
+  }
+  
+  .social-row img {
+    width: 40px; /* each icon */
+    height: auto;
+    cursor: pointer;
+  }
+  
+  
+  /* "Do you already have an account? Login" text */
+  .already-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160%;
+    color: #000;
+    margin-top: 125px;
+  }
+  .login-link {
+    text-decoration: underline;
+    color: #2C6DFB;
+    margin-left: 4px;
+    font-weight: 500;
+  }
+
+  .login-field {
+    position: relative;
+    width: 406px; /* Match input width */
+  }
+  
+  .login-input {
+    width: 406px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #79747E;
+    padding-left: 40px; /* 20px (icon) + 8px (gap) + some buffer */
+    padding-right: 40px; /* Ensure space for hide icon */
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .lock-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+  
+  .hide-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  

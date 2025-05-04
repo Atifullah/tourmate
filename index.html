@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tourmate Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="stylesheet" href="styles/signup.css" />
+
+  <!-- Google Fonts: Manrope -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+  <div class="main-container">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar d-none d-md-block">
+      <div class="container-fluid">
+        <!-- Logo on the left -->
+        <a class="navbar-brand" href="#">
+          <img src="assets/icons/tourMateLogo.svg" alt="Tourmate Logo" height="40" />
+        </a>
+
+        <!-- Right side -->
+        <div class="d-flex align-items-center">
+          <!-- Text -->
+          <span class="nav-text me-4" id="openSignupModal">Conviértete en Proveedor</span>
+          <div id="signupModalOverlay" class="signup-modal-overlay">
+            <div class="signup-modal-box">
+              <!-- Close icon -->
+              <img src="assets/icons/close.svg" alt="Close" class="modal-close-icon" id="closeSignupModal" />
+              <!-- Left side: Image and gradient -->
+              <div class="signup-modal-left">
+                <img src="assets/images/signupImage.png" alt="Signup Image" class="signup-image" />
+                <div class="signup-left-gradient"></div>
+                <div class="left-caption text-white">
+                  <h5 class="caption-title">Comunidad aventurera</h5>
+                  <p class="caption-text">
+                    Exploradores y aventureros que comparten sus vivencias, rutas, recomendaciones, eventos y trucos
+                    ocultos en un solo espacio.
+                  </p>
+                </div>
+              </div>
+              <!-- Right side: Signup form -->
+              <div class="signup-modal-right">
+                <img src="assets/icons/tourMateLogo.svg" alt="Tourmate Logo" class="tourmate-logo" />
+                <h2 class="signup-title mt-3">Regístrate</h2>
+                <p class="signup-subtitle">Empecemos con TourMate</p>
+                <div class="position-relative email-field">
+                  <img src="assets/icons/email.svg" alt="Email Icon" class="email-icon " />
+                  <input type="email" class="signup-input" placeholder="karols@email.com" />
+                </div>
+                <button class="btn-signup mt-3" id="openRegisterModalBtn">Sign up for TourMate</button>
+                <div class=" or-continue-text">or continue with</div>
+                <div class="social-row d-flex gap-3 mt-3">
+                  <img src="assets/icons/signup-Fb.svg" alt="Facebook" width="40" />
+                  <img src="assets/icons/signup-Google.svg" alt="Google" width="40" />
+                  <img src="assets/icons/signup-Apple.svg" alt="Apple" width="40" />
+                </div>
+                <div class="text-center already-text">
+                  Do you already have an account?
+                  <a href="#" class="login-link" id="openLoginModal">Login</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="RegisterModalOverlay" class="reg-modal-overlay">
+            <div class="reg-modal-box">
+              <!-- Close icon -->
+              <img src="assets/icons/close.svg" alt="Close" class="modal-close-icon" id="closeRegModal" />
+              <!-- Left side: Image and gradient -->
+              <div class="signup-modal-left">
+                <img src="assets/images/signupImage.png" alt="Signup Image" class="signup-image" />
+                <div class="signup-left-gradient"></div>
+                <div class="left-caption text-white">
+                  <h5 class="caption-title">Comunidad aventurera</h5>
+                  <p class="caption-text">
+                    Exploradores y aventureros que comparten sus vivencias, rutas, recomendaciones, eventos y trucos
+                    ocultos en un solo espacio.
+                  </p>
+                </div>
+              </div>
+              <!-- Right side: Signup form -->
+              <div class="signup-modal-right">
+                <img src="assets/icons/tourMateLogo.svg" alt="Tourmate Logo" class="tourmate-logo" />
+                <h2 class="signup-title mt-3">Regístrate</h2>
+                <p class="signup-subtitle">Empecemos con TourMate</p>
+                <div class="mt-3">
+                  <input type="firstName" class="reg-input" placeholder="First Name" />
+                </div>
+                <div class=" mt-2">
+                  <input type="lastName" class=" reg-input" placeholder="Last Name" />
+                </div>
+                <div class="input-container mt-2">
+                  <input type="password" class="reg-input" placeholder="Password" />
+                  <img src="assets/icons/hideIcon.svg" alt="Hide Icon" class="hide-icon" />
+                </div>
+
+                <div class="input-container mt-2">
+                  <input type="password" class="reg-input" placeholder="Confirm Password" />
+                  <img src="assets/icons/hideIcon.svg" alt="Hide Icon" class="hide-icon" />
+                </div>
+
+                <div class="d-flex align-items-end">
+                  <input type="checkbox" style="width: 19px; height: 19px;" />
+                  <label for="termsCheckbox" class="or-continue-text ms-2">Accept the Terms &amp; Condition</label>
+                </div>
+                <button class="btn-signup mt-3">Crear cuenta</button>
+
+                <div class="text-left mt-3">
+                  Lorem ipsum dolor sit amet consectetur. Egestas tellus id at diam eget. Elementum ut est arcu velit
+                  nisi auctor curabitur massa ullamcorper.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="loginModalOverlay" class="login-modal-overlay">
+            <div class="login-modal-box">
+              <!-- Close icon for Login Modal -->
+              <img src="assets/icons/close.svg" alt="Close" class="modal-close-icon" id="closeLoginModal" />
+              <!-- Left side: Image and gradient -->
+              <div class="signup-modal-left">
+                <img src="assets/images/signupImage.png" alt="Signup Image" class="signup-image" />
+                <div class="signup-left-gradient"></div>
+                <div class="left-caption text-white">
+                  <h5 class="caption-title">Comunidad aventurera</h5>
+                  <p class="caption-text">
+                    Exploradores y aventureros que comparten sus vivencias, rutas, recomendaciones, eventos y trucos
+                    ocultos en un solo espacio.
+                  </p>
+                </div>
+              </div>
+              <!-- Right side: Login form -->
+              <div class="signup-modal-right">
+                <img src="assets/icons/tourMateLogo.svg" alt="Tourmate Logo" class="tourmate-logo" />
+                <h2 class="signup-title mt-3">Bienvenido 👋</h2>
+                <p class="signup-subtitle">Empecemos con TourMate</p>
+                <div class="position-relative email-field">
+                  <img src="assets/icons/email.svg" alt="Email Icon" class="email-icon" />
+                  <input type="email" class="signup-input" placeholder="your-email@example.com">
+                </div>
+                <div class="login-field position-relative mt-3">
+                  <img src="assets/icons/lockIcon.svg" alt="Lock Icon" class="lock-icon" />
+                  <input type="password" class="login-input" placeholder="Password">
+                  <img src="assets/icons/hideIcon.svg" alt="Hide Icon" class="hide-icon" />
+                </div>
+
+                <div class="text-end or-continue-text login-link">Forget Password?</div>
+
+
+                <button class="btn-signup mt-3">Sign-In</button>
+                <div class="text-center or-continue-text">or access with</div>
+                <div class="social-row d-flex gap-3 mt-3">
+                  <img src="assets/icons/signup-Fb.svg" alt="Facebook" width="40" />
+                  <img src="assets/icons/signup-Google.svg" alt="Google" width="40" />
+                  <img src="assets/icons/signup-Apple.svg" alt="Apple" width="40" />
+                </div>
+                <div class="text-center already-text mt-4">
+                  Don't have an account?
+                  <a href="#" class="login-link" id="openSignupFromLogin">Sign up for free</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Icons -->
+          <div class="d-flex gap-3">
+            <img src="assets/icons/userIcon.svg" alt="Users Icon" height="40" width="40" />
+            <img src="assets/icons/worldIcon.svg" alt="World Icon" height="40" width="40" />
+            <img src="assets/icons/iIcon.svg" alt="Info Icon" height="40" width="40" />
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </nav>
+    <nav class="mobile-nav d-md-none fixed-bottom bg-white shadow-sm px-2 py-2">
+      <div class="d-flex justify-content-between align-items-center" style="gap: 8px;">
+
+        <button class="nav-item-btn active" onclick="navigateTo(this, '/index.html')">
+          <div class="nav-icon-wrapper">
+            <img src="assets/icons/locationIcon.svg" class="nav-icon" />
+          </div>
+          <div class="nav-text">Explore</div>
+        </button>
+
+        <button class="nav-item-btn" onclick="navigateTo(this, '/feed.html')">
+          <div class="nav-icon-wrapper">
+            <img src="assets/icons/feedx.svg" class="nav-icon" />
+          </div>
+          <div class="nav-text">Feed</div>
+        </button>
+
+        <button class="nav-item-btn" onclick="navigateTo(this, '/routeList.html')">
+          <div class="nav-icon-wrapper">
+            <img src="assets/icons/routex.svg" class="nav-icon" />
+          </div>
+          <div class="nav-text">Routes</div>
+        </button>
+
+        <button class="nav-item-btn" onclick="navigateTo(this, '/notifications.html')">
+          <div class="nav-icon-wrapper">
+            <img src="assets/icons/notification.svg" class="nav-icon" />
+          </div>
+          <div class="nav-text">Updates</div>
+        </button>
+
+        <button class="nav-item-btn" onclick="navigateTo(this, '/profile.html')">
+          <div class="nav-icon-wrapper">
+            <img src="assets/icons/personx.svg" class="nav-icon" />
+          </div>
+          <div class="nav-text">Profile</div>
+        </button>
+
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- 🌐 DESKTOP VIEW (hidden on mobile) -->
+    <div class="hero-section d-none d-md-block">
+      <div class="hero-overlay">
+        <h1 class="hero-title">Explora, Conecta y Descubre</h1>
+        <p class="hero-description">Los mejores destinos te estan esperando.</p>
+
+        <!-- Search Section (desktop only) -->
+        <div class="container-fluid d-flex justify-content-center mt-4">
+          <div class="search-section d-flex align-items-center">
+            <!-- Hidden on mobile -->
+            <div class="search-item me-custom d-none d-md-flex">
+              <span class="search-title">Cuál es tu destino</span>
+              <span class="search-desc">Busca un lugar</span>
+            </div>
+            <div class="search-item me-custom d-none d-md-flex">
+              <span class="search-title">Cuál es tu destino</span>
+              <span class="search-desc">Busca un lugar</span>
+            </div>
+            <div class="search-item me-custom d-none d-md-flex">
+              <span class="search-title">Cuál es tu destino</span>
+              <span class="search-desc">Busca un lugar</span>
+            </div>
+
+            <!-- Search icon on desktop -->
+            <div class="search-icon-wrapper d-flex align-items-center justify-content-center">
+              <img src="assets/icons/searchIcon.svg" alt="Buscar" width="24" height="24" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <img src="assets/images/heroImage.png" alt="Hero Image" />
+      </div>
+    </div>
+
+    <!-- 📱 MOBILE VIEW ONLY -->
+    <div class="d-block d-md-none position-relative w-100">
+      <!-- Navbar Text + Notification Icon -->
+      <div class="d-flex justify-content-between align-items-center px-3 py-2 position-absolute w-100"
+        style="top: 0; z-index: 10;">
+        <span class="text-white fw-semibold medium">Explora, Conecta y Descubre</span>
+        <img src="assets/icons/notify-white.svg" width="48" height="48" alt="Notify" />
+      </div>
+
+      <!-- Hero Image -->
+      <img src="assets/images/heroImage.png" alt="Hero" class="img-fluid" style="height: 448px; object-fit: cover;" />
+
+      <!-- Mobile Search Input -->
+      <div class="position-absolute start-50 translate-middle-x" style="top: 132px; width: 374px; max-width: 90%;">
+        <div class="d-flex align-items-center bg-white rounded-pill shadow-sm px-3 py-2"
+          style="height: 56px; gap: 8px;">
+          <img src="assets/icons/search.svg" width="24" height="24" alt="Buscar" />
+          <input type="text" class="form-control border-0 p-0 shadow-none" placeholder="Busca tu siguiente aventura"
+            style="font-size: 14px;" />
+          <img src="assets/icons/layers.svg" width="24" height="24" alt="Buscar" />
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- tip Tabs section -->
+
+    <!-- Container to center or pad the nav bar -->
+    <div class="container-fluid my-3 px-3 px-md-5">
+      <!-- TABS NAVIGATION (Combined Web & Mobile) -->
+      <div class="custom-nav-wrapper">
+
+        <!-- 🌐 WEB VIEW -->
+        <div class="row gx-3 align-items-center justify-content-center custom-nav-bar d-none d-md-flex">
+          <div class="col-auto nav-item-link active-link text-center">
+            <img src="assets/icons/flightIcon.svg" class="icon" alt="Flight Icon">
+            <span class="label d-block">TourMate</span>
+          </div>
+          <div class="col-auto nav-item-link text-center">
+            <img src="assets/icons/ticketIcon.png" class="icon" alt="Ticket Icon">
+            <span class="label d-block">Tickets</span>
+          </div>
+          <div class="col-auto nav-item-link text-center">
+            <img src="assets/icons/cupIcon.svg" class="icon" alt="Cup Icon">
+            <span class="label d-block">Eventos</span>
+          </div>
+          <div class="col-auto nav-item-link text-center">
+            <img src="assets/icons/hotelIcon.svg" class="icon" alt="Hotel Icon">
+            <span class="label d-block">Hoteles</span>
+          </div>
+          <div class="col-auto nav-item-link text-center">
+            <img src="assets/icons/flagIcon.svg" class="icon" alt="Flag Icon">
+            <span class="label d-block">Guias</span>
+          </div>
+          <div class="col-auto nav-item-link text-center">
+            <img src="assets/icons/routeIcon.svg" class="icon" alt="Route Icon">
+            <span class="label d-block">Rutas</span>
+          </div>
+          <div class="col-auto nav-item-link text-center">
+            <img src="assets/icons/virtualIcon.svg" class="icon" alt="Virtual Icon">
+            <span class="label d-block">Virtual</span>
+          </div>
+        </div>
+
+        <!-- 📱 MOBILE VIEW -->
+        <div class="container-fluid d-block d-md-none px-0">
+          <div class="custom-scroll-tabs d-flex flex-nowrap overflow-auto px-2">
+            <div class="nav-item-link active-link flex-shrink-0 text-center me-3">
+              <img src="assets/icons/flightIcon.svg" class="icon" alt="Flight Icon" />
+              <span class="label d-block">TourMate</span>
+            </div>
+            <div class="nav-item-link flex-shrink-0 text-center me-3">
+              <img src="assets/icons/ticketIcon.png" class="icon" alt="Ticket Icon" />
+              <span class="label d-block">Tickets</span>
+            </div>
+            <div class="nav-item-link flex-shrink-0 text-center me-3">
+              <img src="assets/icons/cupIcon.svg" class="icon" alt="Cup Icon" />
+              <span class="label d-block">Eventos</span>
+            </div>
+            <div class="nav-item-link flex-shrink-0 text-center me-3">
+              <img src="assets/icons/hotelIcon.svg" class="icon" alt="Hotel Icon" />
+              <span class="label d-block">Hoteles</span>
+            </div>
+            <div class="nav-item-link flex-shrink-0 text-center me-3">
+              <img src="assets/icons/flagIcon.svg" class="icon" alt="Flag Icon" />
+              <span class="label d-block">Guias</span>
+            </div>
+            <div class="nav-item-link flex-shrink-0 text-center me-3">
+              <img src="assets/icons/routeIcon.svg" class="icon" alt="Route Icon" />
+              <span class="label d-block">Rutas</span>
+            </div>
+            <div class="nav-item-link flex-shrink-0 text-center">
+              <img src="assets/icons/virtualIcon.svg" class="icon" alt="Virtual Icon" />
+              <span class="label d-block">Virtual</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- tendency section -->
+    <div class="container my-2 my-sm-5 inner-container">
+      <div class="row align-items-center justify-content-between">
+
+        <!-- LEFT SIDE -->
+        <div class="col">
+          <div class="d-flex align-items-center gap-2">
+            <!-- Title -->
+            <h2 class="tendencias-title mb-0 mb-xl-3">Tendencias Top</h2>
+            <!-- Mobile arrow only -->
+            <img src="assets/icons/arrow-forward.svg" alt="Arrow" class="d-inline-block d-md-none"
+              style="width: 24px; height: 24px; opacity: 0.5;" />
+          </div>
+
+          <!-- Description (hide on mobile) -->
+          <p class="tendencias-desc d-none d-md-block mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+        </div>
+        <!-- RIGHT SIDE: Button (hide on mobile) -->
+        <div class="col-auto d-none d-xl-block">
+          <button class="btn-ver-mas">
+            Ver más tendencias
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 8 images section-->
+    <div class="container my-3 my-sm-5 inner-container">
+      <div class="city-list d-flex align-items-center flex-wrap flex-xl-nowrap overflow-visible overflow-sm-auto">
+
+        <!-- 1. Ciudad X -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Ciudad X" class="city-img">
+          <div class="city-label">Ciudad X</div>
+        </div>
+
+        <!-- 2. Lugar X -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Lugar X" class="city-img">
+          <div class="city-label">Lugar X</div>
+        </div>
+
+        <!-- 3. Barcelona Z -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Barcelona Z" class="city-img">
+          <div class="city-label">Barcelona Z</div>
+        </div>
+
+        <!-- 4. España W -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="España W" class="city-img">
+          <div class="city-label">España W</div>
+        </div>
+
+        <!-- 5. Lugar Y -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Lugar Y" class="city-img">
+          <div class="city-label">Lugar Y</div>
+        </div>
+
+        <!-- 6. Barcelona Z -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Barcelona Z" class="city-img">
+          <div class="city-label">Barcelona Z</div>
+        </div>
+
+        <!-- 7. Ciudad X -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Ciudad X" class="city-img">
+          <div class="city-label">Ciudad X</div>
+        </div>
+
+        <!-- 8. España W + Arrow -->
+        <div class="city-item text-center flex-shrink-0 position-relative">
+          <img src="assets/images/tendency-pic.png" alt="España W" class="city-img">
+          <div class="city-label">España W</div>
+          <div class="arrow-overlay d-none d-xl-flex align-items-center justify-content-center">
+            <img src="assets/icons/rightArrowIcon.svg" alt="Arrow" width="30" height="30">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- recomendados section -->
+
+    <div class="container my-2 my-sm-5  inner-container">
+      <div class="row align-items-center">
+
+        <!-- Left column: Title + Description -->
+        <div class="col">
+          <div class="d-flex align-items-center gap-2">
+
+            <h2 class="tendencias-title mb-0 mb-xl-3">Recomendados disponibles</h2>
+            <img src="assets/icons/arrow-forward.svg" alt="Arrow" class="d-inline-block d-md-none"
+              style="width: 24px; height: 24px; opacity: 0.5;" />
+          </div>
+
+
+          <p class="tendencias-desc d-none d-md-block mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container my-2 my-sm-5 inner-container">
+      <div class="row flex-nowrap flex-sm-wrap gx-2 g-sm-4 overflow-auto">
+        <!-- Repeat this col/card 8 times total -->
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- del mundo section -->
+
+    <div class="container d-flex justify-content-center my-margin-62">
+      <!-- Orange banner -->
+      <div class="orange-section d-flex align-items-center flex-column flex-md-row">
+
+        <!-- Left image -->
+        <img src="assets/images/globalMap.png" alt="Global Map" class="map-image" />
+
+        <!-- Text and button -->
+        <div class="ms-custom ms-md-custom">
+          <h2 class="banner-title">
+            Únete a la comunidad viajera más grande del mundo.
+          </h2>
+          <p class="banner-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc, hendrerit euismod quam enim. Sagittis
+            tortor, sed. Convallis nunc tellus.
+          </p>
+          <button class="btn-register">
+            Regístrate y Descubre
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container my-2 my-sm-5 inner-container">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="d-flex align-items-center gap-2">
+            <h2 class="tendencias-title mb-0 mb-xl-3">Experiencias que no te puedes perder</h2>
+            <img src="assets/icons/arrow-forward.svg" alt="Arrow" class="d-inline-block d-md-none"
+              style="width: 24px; height: 24px; opacity: 0.5;" />
+          </div>
+          <p class="tendencias-desc  d-none d-md-block mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+        </div>
+        <div class="col-auto d-none d-md-block">
+          <button class="btn-ver-mas">
+            Ver más eventos
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- experiencias section -->
+    <div class="container my-4 my-sm-5 inner-container">
+      <div class="row flex-nowrap flex-sm-wrap gx-2 g-sm-4 overflow-auto pb-2">
+        <!-- Card 1 -->
+        <div class="col-auto col-md-6 col-xxl-4 col-lg-6 d-flex justify-content-center">
+          <div class="recomendados-card d-flex">
+            <!-- Left image wrapper -->
+            <div class="image-wrapper position-relative">
+              <img src="assets/images/cityImage.png" alt="City Image" class="city-image" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon" />
+            </div>
+            <!-- Right content -->
+            <div class="recomendados-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="experiencias-tour-title">Tour name, Category</div>
+              <div class="d-flex justify-content-between align-items-center mt-1">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="experience-tour-price mt-1">From $50</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xxl-4 col-lg-6 d-flex justify-content-center">
+          <div class="recomendados-card d-flex">
+            <!-- Left image wrapper -->
+            <div class="image-wrapper position-relative">
+              <img src="assets/images/cityImage.png" alt="City Image" class="city-image" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon" />
+            </div>
+            <!-- Right content -->
+            <div class="recomendados-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="experiencias-tour-title">Tour name, Category</div>
+              <div class="d-flex justify-content-between align-items-center mt-1">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="experience-tour-price mt-1">From $50</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xxl-4 col-lg-6 d-flex justify-content-center">
+          <div class="recomendados-card d-flex">
+            <!-- Left image wrapper -->
+            <div class="image-wrapper position-relative">
+              <img src="assets/images/cityImage.png" alt="City Image" class="city-image" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon" />
+            </div>
+            <!-- Right content -->
+            <div class="recomendados-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="experiencias-tour-title">Tour name, Category</div>
+              <div class="d-flex justify-content-between align-items-center mt-1">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="experience-tour-price mt-1">From $50</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xxl-4 col-lg-6 d-flex justify-content-center">
+          <div class="recomendados-card d-flex">
+            <!-- Left image wrapper -->
+            <div class="image-wrapper position-relative">
+              <img src="assets/images/cityImage.png" alt="City Image" class="city-image" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon" />
+            </div>
+            <!-- Right content -->
+            <div class="recomendados-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="experiencias-tour-title">Tour name, Category</div>
+              <div class="d-flex justify-content-between align-items-center mt-1">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="experience-tour-price mt-1">From $50</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xxl-4 col-lg-6 d-flex justify-content-center">
+          <div class="recomendados-card d-flex">
+            <!-- Left image wrapper -->
+            <div class="image-wrapper position-relative">
+              <img src="assets/images/cityImage.png" alt="City Image" class="city-image" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon" />
+            </div>
+            <!-- Right content -->
+            <div class="recomendados-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="experiencias-tour-title">Tour name, Category</div>
+              <div class="d-flex justify-content-between align-items-center mt-1">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="experience-tour-price mt-1">From $50</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xxl-4 col-lg-6 d-flex justify-content-center">
+          <div class="recomendados-card d-flex">
+            <!-- Left image wrapper -->
+            <div class="image-wrapper position-relative">
+              <img src="assets/images/cityImage.png" alt="City Image" class="city-image" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon" />
+            </div>
+            <!-- Right content -->
+            <div class="recomendados-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="experiencias-tour-title">Tour name, Category</div>
+              <div class="d-flex justify-content-between align-items-center mt-1">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="experience-tour-price mt-1">From $50</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- testemonial section  -->
+  <div class=" testimonial-section">
+    <div class="row g-0">
+
+      <!-- Left 20% (gradient background) -->
+      <div class="col-12  left-gradient position-relative d-flex flex-column justify-content-center"
+        style="width: 30%;">
+
+        <!-- Comment icon (absolutely positioned near top) -->
+        <img src="assets/images/comments.png" alt="Comment Icon" class="comment-icon" />
+
+        <!-- 4 testimonial cards in 2 rows, 2 columns each -->
+        <div class="container">
+          <div class="col col-cols-1 row-cols-md-2 g-4 mt-5">
+            <!-- Card 1 -->
+            <div class="col">
+              <div class="testimonial-card p-3">
+                <div class="d-flex align-items-center">
+                  <img src="assets/images/user1.png" alt="User 1" class="user-img me-2" />
+                  <div class="fs-2 fw-bold text-gray">4.5
+
+                    <img src="assets/icons/stars.svg" alt="Star Rating" width="18" class="mb-2" />
+                    <p class="font-12">Erika, Mar 2022</p>
+                  </div>
+                </div>
+
+                <div class="testimonial-text fw-bold">
+                  Title, Lorem ipsum dolor amet...
+
+                </div>
+                <p class="testimonial-author text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  ipsum
+                  dolor sit amet, consectetur adipis.</p>
+
+
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+              <div class="testimonial-card p-3">
+                <div class="d-flex align-items-center">
+                  <img src="assets/images/user1.png" alt="User 2" class="user-img me-2" />
+                  <div class="fs-2 fw-bold text-gray">4.5
+                    <span>
+                      <img src="assets/icons/stars.svg" alt="Star Rating" width="18" class="mb-2" />
+                    </span>
+                    <p class="font-12">Erika, Mar 2022</p>
+
+                  </div>
+                </div>
+
+                <div class="testimonial-text fw-bold">
+                  Title, Lorem ipsum dolor amet...
+                </div>
+                <div class="testimonial-author text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, ipsum dolor sit amet, consectetur adipis...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-12  right-image d-flex align-items-center justify-content-center" style="width: 70%;">
+        <div class="container p-0">
+          <div class="col col-cols-1 row-cols-md-2 g-4 mt-5">
+            <!-- Card 1 -->
+            <div class="col">
+              <div class="testimonial-card2 p-3  d-none d-md-block">
+                <div class="d-flex align-items-center">
+                  <img src="assets/images/user1.png" alt="User 1" class="user-img me-2" />
+                  <div class="fs-2 fw-bold text-gray">4.5
+
+                    <img src="assets/icons/stars.svg" alt="Star Rating" width="18" class="mb-2" />
+                    <p class="font-12">Erika, Mar 2022</p>
+
+                  </div>
+                </div>
+
+                <div class="testimonial-text fw-bold">
+                  Title, Lorem ipsum dolor amet...
+                </div>
+                <div class="testimonial-author text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, ipsum dolor sit amet, consectetur adipis...
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="testimonial-card2 p-3  d-none d-md-block">
+              <div class="d-flex align-items-center">
+                <img src="assets/images/user1.png" alt="User 2" class="user-img me-2" />
+                <div class="fs-2 fw-bold text-gray">4.5
+
+                  <img src="assets/icons/stars.svg" alt="Star Rating" width="18" class="mb-2" />
+                  <p class="font-12">Erika, Mar 2022</p>
+                </div>
+
+              </div>
+              <div class="testimonial-text fw-bold">
+                Title, Lorem ipsum dolor amet...
+              </div>
+              <div class="testimonial-author text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, ipsum dolor sit amet, consectetur adipis...
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- conoce section -->
+  <div class="container my-margin-top-90">
+    <div class="container  inner-container ">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="d-flex align-items-center gap-2">
+            <!-- Title -->
+            <h2 class="tendencias-title mb-0 mb-xl-3">Conoce las rutas destacadas</h2>
+            <!-- Mobile arrow only -->
+            <img src="assets/icons/arrow-forward.svg" alt="Arrow" class="d-inline-block d-md-none"
+              style="width: 24px; height: 24px; opacity: 0.5;" />
+          </div>
+          <p class="tendencias-desc d-none d-md-block mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+        </div>
+
+        <div class="col-auto d-none d-md-block">
+          <button class="btn-ver-mas">
+            Ver todas las rutas
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  <div class="container my-5 inner-container">
+    <div class="conoce-city-scroller">
+      <div class="conoce-city-list d-flex align-items-center">
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Ciudad X" class="Conoce-city-image">
+          <div class="city-label">Ciudad X</div>
+        </div>
+
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Lugar X" class="Conoce-city-image">
+          <div class="city-label">Lugar X</div>
+        </div>
+
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Barcelona Z" class="Conoce-city-image">
+          <div class="city-label">Barcelona Z</div>
+        </div>
+
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="España W" class="Conoce-city-image">
+          <div class="city-label">España W</div>
+        </div>
+
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Lugar Y" class="Conoce-city-image">
+          <div class="city-label">Lugar Y</div>
+        </div>
+
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Barcelona Z" class="Conoce-city-image">
+          <div class="city-label">Barcelona Z</div>
+        </div>
+
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Ciudad X" class="Conoce-city-image">
+          <div class="city-label">Ciudad X</div>
+        </div>
+
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="España W" class="Conoce-city-image">
+          <div class="city-label">España W</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conoce el mundo -->
+
+  <div>
+    <div class="container my-2 my-sm-5   inner-container mt-1">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="d-flex align-items-center gap-2">
+
+            <h2 class="tendencias-title mb-0 mb-xl-3">Conoce el mundo desde tu hogar</h2>
+            <img src="assets/icons/arrow-forward.svg" alt="Arrow" class="d-inline-block d-md-none"
+              style="width: 24px; height: 24px; opacity: 0.5;" />
+          </div>
+          <p class="tendencias-desc d-none d-md-block mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        </div>
+
+        <!-- Right column: Button -->
+        <div class="col-auto d-none d-md-block">
+          <button class="btn-ver-mas">
+            Ver más tours virtuales
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container inner-container ticker-section" style="margin-bottom: 280px; margin-top: 55px;">
+    <!-- Mobile scroller container -->
+    <div class="conoce-cards-scroller d-md-none">
+      <div class="conoce-cards-row d-flex">
+        <!-- Card 1 -->
+        <div class="conoce-card-mobile flex-shrink-0">
+          <div class="conoce-card position-relative">
+            <img src="assets/images/conoce-el-image.png" alt="Conoce El Image" class="conoce-card-img" />
+            <div class="conoce-card-label">Unlock for $50</div>
+            <div class="conoce-card-title mt-3">Barcelona</div>
+            <div class="conoce-card-desc">Description duis aute irure dolor in reprehenderit in voluptate velit.</div>
+            <div class="d-flex align-items-center mt-3 bottom-row">
+              <img src="assets/icons/plusIcon.svg" alt="Plus Icon" width="24" height="24" />
+              <span class="language-text ms-2 me-2">Catalán</span>
+              <span class="dot me-2">•</span>
+              <span class="time-text">23 min</span>
+              <img src="assets/icons/blueArrowIcon.svg" alt="Blur Arrow Icon" class="ms-auto" width="24" height="24" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="conoce-card-mobile flex-shrink-0">
+          <div class="conoce-card position-relative">
+            <img src="assets/images/conoce-el-image.png" alt="Conoce El Image" class="conoce-card-img" />
+            <div class="conoce-card-label">Unlock for $50</div>
+            <div class="conoce-card-title mt-3">Barcelona</div>
+            <div class="conoce-card-desc">Description duis aute irure dolor in reprehenderit in voluptate velit.</div>
+            <div class="d-flex align-items-center mt-3 bottom-row">
+              <img src="assets/icons/plusIcon.svg" alt="Plus Icon" width="24" height="24" />
+              <span class="language-text ms-2 me-2">Catalán</span>
+              <span class="dot me-2">•</span>
+              <span class="time-text">23 min</span>
+              <img src="assets/icons/blueArrowIcon.svg" alt="Blur Arrow Icon" class="ms-auto" width="24" height="24" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="conoce-card-mobile flex-shrink-0">
+          <div class="conoce-card position-relative">
+            <img src="assets/images/conoce-el-image.png" alt="Conoce El Image" class="conoce-card-img" />
+            <div class="conoce-card-label">Unlock for $50</div>
+            <div class="conoce-card-title mt-3">Barcelona</div>
+            <div class="conoce-card-desc">Description duis aute irure dolor in reprehenderit in voluptate velit.</div>
+            <div class="d-flex align-items-center mt-3 bottom-row">
+              <img src="assets/icons/plusIcon.svg" alt="Plus Icon" width="24" height="24" />
+              <span class="language-text ms-2 me-2">Catalán</span>
+              <span class="dot me-2">•</span>
+              <span class="time-text">23 min</span>
+              <img src="assets/icons/blueArrowIcon.svg" alt="Blur Arrow Icon" class="ms-auto" width="24" height="24" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="conoce-card-mobile flex-shrink-0">
+          <div class="conoce-card position-relative">
+            <img src="assets/images/conoce-el-image.png" alt="Conoce El Image" class="conoce-card-img" />
+            <div class="conoce-card-label">Unlock for $50</div>
+            <div class="conoce-card-title mt-3">Barcelona</div>
+            <div class="conoce-card-desc">Description duis aute irure dolor in reprehenderit in voluptate velit.</div>
+            <div class="d-flex align-items-center mt-3 bottom-row">
+              <img src="assets/icons/plusIcon.svg" alt="Plus Icon" width="24" height="24" />
+              <span class="language-text ms-2 me-2">Catalán</span>
+              <span class="dot me-2">•</span>
+              <span class="time-text">23 min</span>
+              <img src="assets/icons/blueArrowIcon.svg" alt="Blur Arrow Icon" class="ms-auto" width="24" height="24" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop grid (hidden on mobile) -->
+    <div class="row g-5 d-none d-md-flex">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex justify-content-center">
+        <div class="conoce-card position-relative">
+          <img src="assets/images/conoce-el-image.png" alt="Conoce El Image" class="conoce-card-img" />
+          <div class="conoce-card-label">Unlock for $50</div>
+          <div class="conoce-card-title mt-3">Barcelona</div>
+          <div class="conoce-card-desc">Description duis aute irure dolor in reprehenderit in voluptate velit.</div>
+          <div class="d-flex align-items-center mt-3 bottom-row">
+            <img src="assets/icons/plusIcon.svg" alt="Plus Icon" width="24" height="24" />
+            <span class="language-text ms-2 me-2">Catalán</span>
+            <span class="dot me-2">•</span>
+            <span class="time-text">23 min</span>
+            <img src="assets/icons/blueArrowIcon.svg" alt="Blur Arrow Icon" class="ms-auto" width="24" height="24" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex justify-content-center">
+        <div class="conoce-card position-relative">
+          <img src="assets/images/conoce-el-image.png" alt="Conoce El Image" class="conoce-card-img" />
+          <div class="conoce-card-label">Unlock for $50</div>
+          <div class="conoce-card-title mt-3">Barcelona</div>
+          <div class="conoce-card-desc">Description duis aute irure dolor in reprehenderit in voluptate velit.</div>
+          <div class="d-flex align-items-center mt-3 bottom-row">
+            <img src="assets/icons/plusIcon.svg" alt="Plus Icon" width="24" height="24" />
+            <span class="language-text ms-2 me-2">Catalán</span>
+            <span class="dot me-2">•</span>
+            <span class="time-text">23 min</span>
+            <img src="assets/icons/blueArrowIcon.svg" alt="Blur Arrow Icon" class="ms-auto" width="24" height="24" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex justify-content-center">
+        <div class="conoce-card position-relative">
+          <img src="assets/images/conoce-el-image.png" alt="Conoce El Image" class="conoce-card-img" />
+          <div class="conoce-card-label">Unlock for $50</div>
+          <div class="conoce-card-title mt-3">Barcelona</div>
+          <div class="conoce-card-desc">Description duis aute irure dolor in reprehenderit in voluptate velit.</div>
+          <div class="d-flex align-items-center mt-3 bottom-row">
+            <img src="assets/icons/plusIcon.svg" alt="Plus Icon" width="24" height="24" />
+            <span class="language-text ms-2 me-2">Catalán</span>
+            <span class="dot me-2">•</span>
+            <span class="time-text">23 min</span>
+            <img src="assets/icons/blueArrowIcon.svg" alt="Blur Arrow Icon" class="ms-auto" width="24" height="24" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex justify-content-center">
+        <div class="conoce-card position-relative">
+          <img src="assets/images/conoce-el-image.png" alt="Conoce El Image" class="conoce-card-img" />
+          <div class="conoce-card-label">Unlock for $50</div>
+          <div class="conoce-card-title mt-3">Barcelona</div>
+          <div class="conoce-card-desc">Description duis aute irure dolor in reprehenderit in voluptate velit.</div>
+          <div class="d-flex align-items-center mt-3 bottom-row">
+            <img src="assets/icons/plusIcon.svg" alt="Plus Icon" width="24" height="24" />
+            <span class="language-text ms-2 me-2">Catalán</span>
+            <span class="dot me-2">•</span>
+            <span class="time-text">23 min</span>
+            <img src="assets/icons/blueArrowIcon.svg" alt="Blur Arrow Icon" class="ms-auto" width="24" height="24" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-section position-relative">
+    <!-- newsaltter section -->
+    <div class="container my-5 d-flex justify-content-center inner-container above-the-footer">
+      <!-- Outer pill-shaped banner -->
+      <div class="newsletter-banner d-flex align-items-center">
+
+        <!-- Left Column (text & input) -->
+        <div class="left-content">
+          <h2 class="newsletter-title">Suscríbete al Newsletter</h2>
+          <h3 class="newsletter-desc-title mt-3">Te acompañamos en tu viaje</h3>
+          <p class="newsletter-desc">
+            Estás en camino de explorar y descubrir nuevos lugares conectando
+            con viajeros de todas partes del mundo.
+          </p>
+
+          <!-- Input + Button Row -->
+          <div class="d-flex align-items-center gap-3 mt-3">
+            <!-- Input field -->
+            <div class="newsletter-input-wrapper">
+              <input type="text" class="newsletter-input" placeholder="Escribe tu email y recibe actualizaciones" />
+            </div>
+            <!-- Button -->
+            <button class="btn-subscribe">
+              Suscríbeme
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column (image) -->
+        <div class="right-content d-flex align-items-center justify-content-center">
+          <img src="assets/images/newslatterImage.png" alt="Newsletter Image" class="newsletter-image" />
+        </div>
+
+      </div>
+    </div>
+    <div class="container-fluid px-0">
+      <div class="footer-container mx-auto">
+        <div class="row g-0">
+
+          <!-- 1) Left Column: Logos + Social Icons -->
+          <!-- Column for Logos + Social Icons -->
+          <div class="col-auto d-flex flex-column justify-content-start align-items-center">
+            <!-- Flight Logo (top) -->
+            <img src="assets/images/tFlight.png" alt="Flight Logo" class="flightfooter-logo mb-2" />
+
+            <!-- Tour Logo (bottom) -->
+            <img src="assets/images/tourLogoFooter.png" alt="Tour Logo" class="footer-logo" />
+
+            <!-- Social Icons (24px margin-top from logos) -->
+            <div class="d-flex align-items-center mt-3" style="gap: 12px;">
+              <img src="assets/icons/fb.svg" alt="Facebook" class="social-icon" />
+              <img src="assets/icons/insta.svg" alt="Instagram" class="social-icon" />
+              <img src="assets/icons/x.svg" alt="X (Twitter)" class="social-icon" />
+              <img src="assets/icons/youtube.svg" alt="YouTube" class="social-icon" />
+            </div>
+          </div>
+
+
+          <!-- Spacer to match the 140px margin from the left col to the next col -->
+          <div class="col-auto d-none d-lg-flex" style="width:140px;"></div>
+
+          <!-- 2) Nuestros Destinos -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Nuestros Destinos</div>
+            <ul class="footer-col-list">
+              <li>Canadá</li>
+              <li>Alaska</li>
+              <li>France</li>
+              <li>Iceland</li>
+            </ul>
+          </div>
+
+          <!-- 3) Actividades Top -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Actividades Top</div>
+            <ul class="footer-col-list">
+              <li>Auroras boreales</li>
+              <li>Crucero y Navegación</li>
+              <li>Multi-actividades</li>
+              <li>Kayak</li>
+            </ul>
+          </div>
+
+          <!-- 4) Viajes y Hoteles -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Viajes y Hoteles</div>
+            <ul class="footer-col-list">
+              <li>Bali Guía de Viaje</li>
+              <li>Sri Lanka Guía de Viaje</li>
+              <li>Perú Guía de Viaje</li>
+              <li>Bali Guía de Viaje</li>
+            </ul>
+          </div>
+
+          <!-- 5) Sobre Nosotros -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Sobre Nosotros</div>
+            <ul class="footer-col-list">
+              <li>Nuestra Historia</li>
+              <li>Somos TourMate</li>
+            </ul>
+            <!-- Google Play image -->
+            <img src="assets/images/google.png" alt="Get it on Google Play" class="store-badge mt-2" />
+          </div>
+
+          <!-- 6) Contáctanos -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Contáctanos</div>
+            <ul class="footer-col-list">
+              <li>hello@tourmate.com</li>
+              <li>Dirección X</li>
+            </ul>
+            <!-- Apple Store image -->
+            <img src="assets/images/apple.png" alt="Download on the App Store" class="store-badge mt-2" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const openSignupModal = document.getElementById('openSignupModal');
+      const closeSignupModal = document.getElementById('closeSignupModal');
+      const openRegisterModalBtn = document.getElementById('openRegisterModalBtn');
+      const closeRegisterModal = document.getElementById('closeRegModal');
+      const openLoginModel = document.getElementById('openLoginModal');
+      const closeLoginModal = document.getElementById('closeLoginModal');
+
+      const signupModalOverlay = document.getElementById('signupModalOverlay');
+      const registerModalOverlay = document.getElementById('RegisterModalOverlay');
+      // <--- This was missing:
+      const loginModalOverlay = document.getElementById('loginModalOverlay');
+
+      // Open signup modal on trigger click
+      openSignupModal.addEventListener('click', function () {
+        signupModalOverlay.style.display = 'block';
+      });
+
+      // Close signup modal
+      closeSignupModal.addEventListener('click', function () {
+        signupModalOverlay.style.display = 'none';
+      });
+
+      // Switch from signup to register modal
+      openRegisterModalBtn.addEventListener('click', function () {
+        signupModalOverlay.style.display = 'none';
+        registerModalOverlay.style.display = 'block';
+      });
+
+      // Switch from signup modal to login modal
+      openLoginModel.addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log("called login");
+        signupModalOverlay.style.display = 'none';
+        loginModalOverlay.style.display = 'block';
+      });
+
+      // Close login modal
+      closeLoginModal.addEventListener('click', function () {
+        loginModalOverlay.style.display = 'none';
+      });
+
+      // Close register modal
+      closeRegisterModal.addEventListener('click', function () {
+        registerModalOverlay.style.display = 'none';
+      });
+    });
+
+    function navigateTo(element, url) {
+      setActive(element);
+      window.location.href = url;
+    }
+
+    function setActive(button) {
+      document.querySelectorAll('.nav-item-btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    }
+
+  </script>
+
+
+</body>
+
+</html>

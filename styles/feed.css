@@ -1,0 +1,429 @@
+/* Add this to styles.css or feed.css */
+html, body {
+    background-color: #fff !important;
+    height: 100%;
+  }
+  
+.welcome-banner {
+    width: 100%;
+    max-width: 1314px;
+    height: 179px;
+    padding: 24px 40px;
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0) -12.1%,
+        rgba(78, 78, 78, 0.25) 28.23%,
+        rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: multiply;
+    background-color: #2C6DFB; /* base blue background before blending */
+    border-radius: 0 0 20px 20px;
+}
+
+.welcome-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 46px;
+    color: #F5EFF7;
+}
+
+.welcome-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #F5EFF7;
+    line-height: 100%;
+}
+
+/* General Typography */
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Left Post Editor */
+  .post-editor {
+    width: 798px;
+    height: 247px;
+    padding: 24px 16px;
+    border: 1px solid #E2E8F0;
+  }
+  
+  .profile-pic-sm {
+    width: 41px;
+    height: 41px;
+    border-radius: 92.25px;
+  }
+  
+  .post-textarea {
+    height: 140px;
+    resize: none;
+    border: none;
+    padding-top: 10px;
+    font-size: 16px;
+    margin-left: 8px;
+  }
+  
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+  }
+  
+  .post-btn {
+    width: 101px;
+    height: 40px;
+    border-radius: 100px;
+    gap: 8px;
+    font-weight: 500;
+  }
+  
+  /* Post Feed */
+  .post {
+    width: 798px;
+    padding: 24px 16px;
+    border: 1px solid #E2E8F0;
+  }
+  
+  .username {
+    font-weight: 700;
+    font-size: 14px;
+    color: #1E293B;
+  }
+  
+  .post-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .hashtags {
+    color: #3070FE;
+  }
+  
+  .post-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+  
+  /* Right Sidebar */
+  .right-sidebar {
+    width: 396px;
+    padding: 32px 24px;
+    background-color: #F8FAFC;
+  }
+  
+  .profile-pic-lg {
+    width: 96px;
+    height: 96px;
+    border-radius: 184.5px;
+  }
+  
+  .active-indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 184.5px;
+    background-color: #22C55E;
+    border: 2.25px solid #fff;
+    position: absolute;
+    top: 72px;
+    right: 130px;
+  }
+  .active-indicator-profile{
+    width: 24px;
+    height: 24px;
+    border-radius: 184.5px;
+    background-color: #22C55E;
+    border: 2.25px solid #fff;
+    position: absolute;
+    top: 72px;
+    right: 335px;
+  }
+  
+  .profile-name {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 28px;
+    color: #1E293B;
+  }
+  
+  .profile-handle, .profile-sub {
+    font-weight: 500;
+    font-size: 16px;
+    color: #6B7280;
+  }
+  
+  .requests-section {
+    margin-top: 40px;
+  }
+  
+  .requests-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: #1E293B;
+  }
+  
+  .requests-see-all {
+    font-weight: 700;
+    font-size: 14px;
+    color: #3070FE;
+    cursor: pointer;
+  }
+  
+  .request-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  
+  .profile-pic-md {
+    width: 40px;
+    height: 40px;
+    border-radius: 76.88px;
+  }
+  
+  .request-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: #1E293B;
+  }
+  
+  .request-handle {
+    font-weight: 400;
+    font-size: 14px;
+    color: #475569;
+  }
+
+  /* Left Sidebar */
+.left-sidebar {
+    width: 396px;
+    padding: 32px 24px;
+    background-color: #F8FAFC;
+    gap: 40px;
+    height: 928px;
+  }
+  
+  /* Tabs */
+  .left-tab {
+    width: 174.5px;
+    height: 40px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border: 1px solid #79747E;
+    background-color: #fff;
+  }
+  
+  .right-tab {
+    width: 174.5px;
+    height: 40px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: #D9E2FF;
+    color: #2E42A5;
+    border: 1px solid #79747E;
+  }
+  
+  /* Amigos Text Section */
+  .friends-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.8px;
+  }
+  
+  .friends-count {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6px;
+  }
+  
+ /* Search Bar */
+.search-box {
+    width: 360px;
+    height: 56px;
+    border-radius: 28px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.search-box .input-group-text {
+    border: none;
+    padding-left: 20px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    border: none;
+    border-radius: 28px;
+    height: 56px;
+    box-shadow: none;
+    background-color: transparent;
+    padding-right: 20px;
+    font-size: 16px;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+  
+  /* Right Section */
+  .right-section {
+    margin-left: 12px;
+    width: 798px;
+  }
+  
+  /* Profile Card */
+  .right-sidebar {
+    width: 100%;
+    padding: 24px 16px;
+  }
+  
+
+  .post-img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+  .eliminar-btn {
+    width: 124px;
+    height: 40px;
+    padding: 10px 24px;
+    gap: 8px;
+    border: 1px solid #CBD5E1;
+    border-radius: 100px;
+    background-color: white;
+    color: #1E293B;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .eliminar-btn img {
+    margin-left: 8px;
+  }
+  
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #CBD5E1;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+  
+  .icon-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Chat Section Styles */
+.chat-section {
+    width: 798px;
+    height: 862px;
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .chat-header {
+    height: 74px;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  
+  .chat-bubble-left {
+    background-color: #F1F5F9;
+    padding: 8px 16px;
+    max-width: 336px;
+    border-radius: 20px 20px 20px 8px;
+    color: #1E293B;
+    font-size: 14px;
+  }
+  
+  .chat-bubble-right {
+    background-color: #00174A;
+    color: white;
+    padding: 8px 16px;
+    max-width: 336px;
+    border-radius: 20px 20px 8px 20px;
+    font-size: 14px;
+  }
+  
+  .chat-image-box {
+    width: 224px;
+    background-color: #EEF2FF;
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  .chat-tag {
+    background-color: #F1F5F9;
+    padding: 8px 16px;
+    border-radius: 20px 20px 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .chat-footer input {
+    height: 48px;
+    background-color: white;
+    border-radius: 28px;
+    border: 1px solid #E2E8F0;
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .input-tt {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+  }
+  
+  .input-mick {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+  }
+
+  /* suggets user css */
+
+  .preview-placeholder {
+    width: 798px;
+    height: 875px;
+  }
+  
+  .preview-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 18px; /* You can adjust this if you define `Headline Small/Size` specifically */
+    color: #2E42A5;
+    line-height: 1.4;
+  }
+  

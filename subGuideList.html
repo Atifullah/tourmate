@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sub-Guide-List Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/search.css" />
+    <link rel="stylesheet" href="styles/guide.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+
+
+    <!-- Google Fonts: Manrope -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg custom-navbar d-none d-xl-block">
+            <div class="container-fluid">
+                <!-- Logo on the left -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/icons/tourMateLogo.svg" alt="Tourmate Logo" height="40" />
+                </a>
+
+                <!-- Right side -->
+                <div class="d-flex align-items-center">
+                    <!-- Text -->
+                    <span class="nav-text me-4">Conviértete en Proveedor</span>
+                    <!-- Icons -->
+                    <div class="d-flex gap-3">
+                        <img src="assets/icons/userIcon.svg" alt="Users Icon" height="40" width="40" />
+                        <img src="assets/icons/worldIcon.svg" alt="World Icon" height="40" width="40" />
+                        <img src="assets/icons/iIcon.svg" alt="Info Icon" height="40" width="40" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="search-hero-section d-none d-xl-block">
+            <div class="search-hero-overlay">
+                <h1 class="search-hero-title">Barcelona</h1>
+                <p class="search-hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor. Lorem ipsum dolor </br>
+                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+
+            <div class="search-hero-content">
+                <img src="assets/images/searchHeroImage.png" alt="Hero Image" />
+            </div>
+
+        </div>
+        <!-- TICKET BANNER FOR MOBILE -->
+        <div class="d-flex align-items-center d-xl-none w-100 bg-primary-mobile px-2" style="height: 64px; gap: 4px;">
+            <img src="assets/icons/arrow-back.svg" alt="Back" width="24" height="24">
+            <span class="ticket-label-mobile">Tickets en Barcelona</span>
+        </div>
+
+
+        <!-- Mobile Only Tour Card Section -->
+        <div class="tour-card-mobile d-block d-xl-none">
+            <!-- Top Card -->
+            <div class="d-flex gap-3 align-items-start">
+                <img src="assets/images/ticketImage.png" class="tour-image" alt="Barcelona" />
+                <div class="flex-grow-1">
+                    <h5 class="mb-1" style="font-size: 16px; font-weight: 600;">Barcelona</h5>
+                    <p class="mb-0" style="font-size: 14px; font-weight: 400;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    </p>
+                </div>
+            </div>
+
+            <!-- Filter Slider -->
+            <div class="tour-filter-slider d-flex overflow-auto">
+                <div class="filter-pill">Fechas <img src="assets/icons/arrowDown.svg" alt="▼" /></div>
+                <div class="filter-pill">Duración <img src="assets/icons/arrowDown.svg" alt="▼" /></div>
+                <div class="filter-pill">Categoría <img src="assets/icons/arrowDown.svg" alt="▼" /></div>
+                <div class="filter-pill">Idioma <img src="assets/icons/arrowDown.svg" alt="▼" /></div>
+            </div>
+
+            <!-- Bottom Line -->
+            <div class="tour-bottom d-flex justify-content-between align-items-center">
+                <span class="recommended-text">Recomendado</span>
+                <img src="assets/icons/layers.svg" class="search-icon" alt="Search" />
+            </div>
+        </div>
+
+
+
+        <!-- sidebar and card section -->
+
+        <div class="container my-5">
+            <div class="row">
+                <!-- Left Sidebar -->
+                <div class="col-auto d-none d-xl-block">
+                    <div class="sidebar p-3">
+                        <!-- 3) Duración Section -->
+                        <div class="sidebar-section mt-3">
+                            <h4 class="sidebar-title">Duración</h4>
+                            <div class="p-3">
+                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                    <span class="check-label">Menos de una hora</span>
+
+                                    <input type="checkbox" class="custom-checkbox" />
+                                </div>
+                                <div class="edad-text">Edad de 16 a 90 años</div>
+
+                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                    <span class="check-label">Entre 2 a 3 horas</span>
+                                    <input type="checkbox" class="custom-checkbox" />
+                                </div>
+                                <div class="edad-text">Edad de 16 a 90 años</div>
+
+                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                    <span class="check-label">mas de 5 horas</span>
+                                    <input type="checkbox" class="custom-checkbox" />
+                                </div>
+                                <div class="edad-text">Edad de 16 a 90 años</div>
+
+                            </div>
+                        </div>
+                        <!-- 5) Idioma Section -->
+                        <div class="sidebar-section mt-3">
+                            <h4 class="sidebar-title">Idioma</h4>
+                            <div class="p-3">
+                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                    <!-- Left side: text -->
+                                    <span class="check-label">Inglés</span>
+
+                                    <!-- Right side: flag + checkbox with gap-3 -->
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="assets/icons/englishFlag.svg" alt="Flag" width="18" height="18" />
+                                        <input type="checkbox" class="custom-checkbox" />
+                                    </div>
+                                </div>
+                                <div class="edad-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor</div>
+
+
+                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                    <!-- Left side: text -->
+                                    <span class="check-label">Inglés</span>
+
+                                    <!-- Right side: flag + checkbox with gap-3 -->
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="assets/icons/englishFlag.svg" alt="Flag" width="18" height="18" />
+                                        <input type="checkbox" class="custom-checkbox" />
+                                    </div>
+                                </div>
+                                <div class="edad-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor</div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content: 32px gap from left sidebar -->
+                <div class="col ms-4 ">
+                    <!-- Top row: "43 resultados" + dropdown on right -->
+                    <div class="d-flex justify-content-between align-items-center mb-4 d-none d-xl-flex">
+                        <span class="result-count">6 videos</span>
+                        <div class="price-filter d-flex align-items-center">
+                            <span class="dropdown-text me-2">Mayor duración</span>
+                            <img src="assets/icons/arrowDown.svg" alt="Arrow" />
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column gap-3">
+
+                        <div class="subGuide-card col-12   d-flex flex-row position-relative">
+                            <!-- Left image wrapper -->
+                            <div class=" position-relative">
+                                <img src="assets/images/ticketImage.png" alt="Ticket Image" class="subGuide-image" />
+                                <!-- Heart icon top-left of the image -->
+                                <div class="doller-label">
+
+                                    <img src="assets/icons/lockIcon.svg" alt="Heart Icon" />
+                                    <span>$5</span>
+                                </div>
+                            </div>
+
+                            <!-- Right content area -->
+                            <div class="right-search-content flex-grow-1">
+                                <div class="ticket-title">
+                                    La Sagrada Familia
+                                </div>
+                                <!-- Description -->
+                                <div class="ticket-desc d-none d-md-block mb-md-2 mb-0">
+                                    Description duis aute irure dolor in reprehenderit in voluptate velit. Description
+                                    duis aute irure dolor in reprehenderit in voluptate velit.Description duis aute
+                                    irure dolor in reprehenderit in...
+                                </div>
+
+
+                                <!-- Rating row -->
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="assets/icons/plusIcon.svg" alt="plusIcon" width="24px" height="24px" />
+                                    <span>Marzo 2023</span>
+                                    <span class="dot">•</span> <!-- Using • instead of . for better alignment -->
+                                    <span>1:05 hrs</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="subGuide-card col-12  d-flex flex-row position-relative">
+                            <!-- Left image wrapper -->
+                            <div class=" position-relative">
+                                <img src="assets/images/ticketImage.png" alt="Ticket Image" class="subGuide-image" />
+                                <!-- Heart icon top-left of the image -->
+                                <div class="doller-label">
+
+                                    <img src="assets/icons/lockIcon.svg" alt="Heart Icon" />
+                                    <span>$5</span>
+                                </div>
+                            </div>
+
+                            <!-- Right content area -->
+                            <div class="right-search-content flex-grow-1">
+                                <div class="mb-0 mb-md-2 ticket-title">
+                                    La Sagrada Familia
+                                </div>
+                                <div class="ticket-desc d-none d-md-block mb-0 mb-md-2">
+                                    Description duis aute irure dolor in reprehenderit in voluptate velit. Description
+                                    duis aute irure dolor in reprehenderit in voluptate velit. Description duis aute
+                                    irure dolor in reprehenderit in...
+                                </div>
+
+
+
+                                <!-- Rating row -->
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="assets/icons/plusIcon.svg" alt="plusIcon" width="24px" height="24px" />
+                                    <span>Marzo 2023</span>
+                                    <span class="dot">•</span> <!-- Using • instead of . for better alignment -->
+                                    <span>1:05 hrs</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="subGuide-card col-12  d-flex flex-row position-relative">
+                            <!-- Left image wrapper -->
+                            <div class=" position-relative">
+                                <img src="assets/images/ticketImage.png" alt="Ticket Image" class="subGuide-image" />
+                                <!-- Heart icon top-left of the image -->
+                                <div class="doller-label">
+
+                                    <img src="assets/icons/lockIcon.svg" alt="Heart Icon" />
+                                    <span>$5</span>
+                                </div>
+                            </div>
+
+                            <!-- Right content area -->
+                            <div class="right-search-content flex-grow-1">
+                                <div class="ticket-title">
+                                    La Sagrada Familia
+                                </div>
+
+                                <!-- Description -->
+                                <div class="ticket-desc d-none d-md-block mb-0 mb-md-2">
+                                    Description duis aute irure dolor in reprehenderit in voluptate velit. Description
+                                    duis aute irure dolor in reprehenderit in voluptate velit. Description duis aute
+                                    irure dolor in reprehenderit in...
+                                </div>
+                                <!-- Rating row -->
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="assets/icons/plusIcon.svg" alt="plusIcon" width="24px" height="24px" />
+                                    <span>Marzo 2023</span>
+                                    <span class="dot">•</span> <!-- Using • instead of . for better alignment -->
+                                    <span>1:05 hrs</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="subGuide-card col-12  d-flex flex-row position-relative">
+                            <!-- Left image wrapper -->
+                            <div class=" position-relative">
+                                <img src="assets/images/ticketImage.png" alt="Ticket Image" class="subGuide-image" />
+                                <!-- Heart icon top-left of the image -->
+                                <div class="doller-label">
+
+                                    <img src="assets/icons/lockIcon.svg" alt="Heart Icon" />
+                                    <span>$5</span>
+                                </div>
+                            </div>
+
+                            <!-- Right content area -->
+                            <div class="right-search-content flex-grow-1">
+                                <div class="ticket-title">
+                                    La Sagrada Familia
+                                </div>
+
+                                <!-- Description -->
+                                <div class="ticket-desc d-none d-md-block mb-0 mb-md-2">
+                                    Description duis aute irure dolor in reprehenderit in voluptate velit. Description
+                                    duis aute irure dolor in reprehenderit in voluptate velit. Description duis aute
+                                    irure dolor in reprehenderit in...
+                                </div>
+
+                                <!-- Rating row -->
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="assets/icons/plusIcon.svg" alt="plusIcon" width="24px" height="24px" />
+                                    <span>Marzo 2023</span>
+                                    <span class="dot">•</span> <!-- Using • instead of . for better alignment -->
+                                    <span>1:05 hrs</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="subGuide-card col-12  d-flex flex-row position-relative">
+                            <!-- Left image wrapper -->
+                            <div class=" position-relative">
+                                <img src="assets/images/ticketImage.png" alt="Ticket Image" class="subGuide-image" />
+                                <!-- Heart icon top-left of the image -->
+                                <div class="doller-label">
+
+                                    <img src="assets/icons/lockIcon.svg" alt="Heart Icon" />
+                                    <span>$5</span>
+                                </div>
+                            </div>
+
+                            <!-- Right content area -->
+                            <div class="right-search-content flex-grow-1">
+                                <div class="ticket-title">
+                                    La Sagrada Familia
+                                </div>
+
+                                <!-- Description -->
+                                <div class="ticket-desc d-none d-md-block mb-0 mb-md-2">
+                                    Description duis aute irure dolor in reprehenderit in voluptate velit. Description
+                                    duis aute irure dolor in reprehenderit in voluptate velit. Description duis aute
+                                    irure dolor in reprehenderit in...
+                                </div>
+
+                                <!-- Rating row -->
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="assets/icons/plusIcon.svg" alt="plusIcon" width="24px" height="24px" />
+                                    <span>Marzo 2023</span>
+                                    <span class="dot">•</span> <!-- Using • instead of . for better alignment -->
+                                    <span>1:05 hrs</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="subGuide-card col-12  d-flex flex-row position-relative">
+                            <!-- Left image wrapper -->
+                            <div class=" position-relative">
+                                <img src="assets/images/ticketImage.png" alt="Ticket Image" class="subGuide-image" />
+                                <!-- Heart icon top-left of the image -->
+                                <div class="doller-label">
+
+                                    <img src="assets/icons/lockIcon.svg" alt="Heart Icon" />
+                                    <span>$5</span>
+                                </div>
+                            </div>
+
+                            <!-- Right content area -->
+                            <div class="right-search-content flex-grow-1">
+                                <div class="ticket-title">
+                                    La Sagrada Familia
+                                </div>
+
+                                <!-- Description -->
+                                <div class="ticket-desc d-none d-md-block mb-0 mb-md-2">
+                                    Description duis aute irure dolor in reprehenderit in voluptate velit. Description
+                                    duis aute irure dolor in reprehenderit in voluptate velit. Description duis aute
+                                    irure dolor in reprehenderit in...
+                                </div>
+
+                                <!-- Rating row -->
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="assets/icons/plusIcon.svg" alt="plusIcon" width="24px" height="24px" />
+                                    <span>Marzo 2023</span>
+                                    <span class="dot">•</span> <!-- Using • instead of . for better alignment -->
+                                    <span>1:05 hrs</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="container my-5 inner-container">
+                <div class="row align-items-center">
+                    <!-- Left column: Title + Description -->
+                    <div class="col">
+                        <h2 class="tendencias-title">Guías recomendadas</h2>
+                        <p class="tendencias-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8 images section-->
+            <div class="container inner-container ticker-section" style="margin-bottom: 280px; margin-top: 40px;">
+                <div
+                    class="city-list d-flex align-items-center flex-wrap flex-xl-nowrap overflow-visible overflow-sm-auto">
+
+                    <!-- 1. Ciudad X -->
+                    <div class="city-item text-center flex-shrink-0">
+                        <img src="assets/images/tendency-pic.png" alt="Ciudad X" class="city-img">
+                        <div class="city-label">Ciudad X</div>
+                    </div>
+
+                    <!-- 2. Lugar X -->
+                    <div class="city-item text-center flex-shrink-0">
+                        <img src="assets/images/tendency-pic.png" alt="Lugar X" class="city-img">
+                        <div class="city-label">Lugar X</div>
+                    </div>
+
+                    <!-- 3. Barcelona Z -->
+                    <div class="city-item text-center flex-shrink-0">
+                        <img src="assets/images/tendency-pic.png" alt="Barcelona Z" class="city-img">
+                        <div class="city-label">Barcelona Z</div>
+                    </div>
+
+                    <!-- 4. España W -->
+                    <div class="city-item text-center flex-shrink-0">
+                        <img src="assets/images/tendency-pic.png" alt="España W" class="city-img">
+                        <div class="city-label">España W</div>
+                    </div>
+
+                    <!-- 5. Lugar Y -->
+                    <div class="city-item text-center flex-shrink-0">
+                        <img src="assets/images/tendency-pic.png" alt="Lugar Y" class="city-img">
+                        <div class="city-label">Lugar Y</div>
+                    </div>
+
+                    <!-- 6. Barcelona Z -->
+                    <div class="city-item text-center flex-shrink-0">
+                        <img src="assets/images/tendency-pic.png" alt="Barcelona Z" class="city-img">
+                        <div class="city-label">Barcelona Z</div>
+                    </div>
+
+                    <!-- 7. Ciudad X -->
+                    <div class="city-item text-center flex-shrink-0">
+                        <img src="assets/images/tendency-pic.png" alt="Ciudad X" class="city-img">
+                        <div class="city-label">Ciudad X</div>
+                    </div>
+
+                    <!-- 8. España W + Arrow -->
+                    <div class="city-item text-center flex-shrink-0 position-relative">
+                        <img src="assets/images/tendency-pic.png" alt="España W" class="city-img">
+                        <div class="city-label">España W</div>
+                        <div class="arrow-overlay d-none d-xl-flex align-items-center justify-content-center">
+                            <img src="assets/icons/rightArrowIcon.svg" alt="Arrow" width="30" height="30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-section position-relative">
+        <!-- newsaltter section -->
+        <div class="container my-5 d-flex justify-content-center inner-container above-the-footer">
+            <!-- Outer pill-shaped banner -->
+            <div class="newsletter-banner d-flex align-items-center">
+
+                <!-- Left Column (text & input) -->
+                <div class="left-content">
+                    <h2 class="newsletter-title">Suscríbete al Newsletter</h2>
+                    <h3 class="newsletter-desc-title mt-3">Te acompañamos en tu viaje</h3>
+                    <p class="newsletter-desc">
+                        Estás en camino de explorar y descubrir nuevos lugares conectando
+                        con viajeros de todas partes del mundo.
+                    </p>
+
+                    <!-- Input + Button Row -->
+                    <div class="d-flex align-items-center gap-3 mt-3">
+                        <!-- Input field -->
+                        <div class="newsletter-input-wrapper">
+                            <input type="text" class="newsletter-input"
+                                placeholder="Escribe tu email y recibe actualizaciones" />
+                        </div>
+                        <!-- Button -->
+                        <button class="btn-subscribe">
+                            Suscríbeme
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column (image) -->
+                <div class="right-content d-flex align-items-center justify-content-center">
+                    <img src="assets/images/newslatterImage.png" alt="Newsletter Image" class="newsletter-image" />
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid px-0">
+            <div class="footer-container mx-auto">
+                <div class="row g-0">
+
+                    <!-- 1) Left Column: Logos + Social Icons -->
+                    <!-- Column for Logos + Social Icons -->
+                    <div class="col-auto d-flex flex-column justify-content-start align-items-center">
+                        <!-- Flight Logo (top) -->
+                        <img src="assets/images/tFlight.png" alt="Flight Logo" class="flightfooter-logo mb-2" />
+
+                        <!-- Tour Logo (bottom) -->
+                        <img src="assets/images/tourLogoFooter.png" alt="Tour Logo" class="footer-logo" />
+
+                        <!-- Social Icons (24px margin-top from logos) -->
+                        <div class="d-flex align-items-center mt-3" style="gap: 12px;">
+                            <img src="assets/icons/fb.svg" alt="Facebook" class="social-icon" />
+                            <img src="assets/icons/insta.svg" alt="Instagram" class="social-icon" />
+                            <img src="assets/icons/x.svg" alt="X (Twitter)" class="social-icon" />
+                            <img src="assets/icons/youtube.svg" alt="YouTube" class="social-icon" />
+                        </div>
+                    </div>
+
+
+                    <!-- Spacer to match the 140px margin from the left col to the next col -->
+                    <div class="col-auto d-none d-lg-flex" style="width:140px;"></div>
+
+                    <!-- 2) Nuestros Destinos -->
+                    <div class="col-auto footer-col">
+                        <div class="footer-col-title">Nuestros Destinos</div>
+                        <ul class="footer-col-list">
+                            <li>Canadá</li>
+                            <li>Alaska</li>
+                            <li>France</li>
+                            <li>Iceland</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3) Actividades Top -->
+                    <div class="col-auto footer-col">
+                        <div class="footer-col-title">Actividades Top</div>
+                        <ul class="footer-col-list">
+                            <li>Auroras boreales</li>
+                            <li>Crucero y Navegación</li>
+                            <li>Multi-actividades</li>
+                            <li>Kayak</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4) Viajes y Hoteles -->
+                    <div class="col-auto footer-col">
+                        <div class="footer-col-title">Viajes y Hoteles</div>
+                        <ul class="footer-col-list">
+                            <li>Bali Guía de Viaje</li>
+                            <li>Sri Lanka Guía de Viaje</li>
+                            <li>Perú Guía de Viaje</li>
+                            <li>Bali Guía de Viaje</li>
+                        </ul>
+                    </div>
+
+                    <!-- 5) Sobre Nosotros -->
+                    <div class="col-auto footer-col">
+                        <div class="footer-col-title">Sobre Nosotros</div>
+                        <ul class="footer-col-list">
+                            <li>Nuestra Historia</li>
+                            <li>Somos TourMate</li>
+                        </ul>
+                        <!-- Google Play image -->
+                        <img src="assets/images/google.png" alt="Get it on Google Play" class="store-badge mt-2" />
+                    </div>
+
+                    <!-- 6) Contáctanos -->
+                    <div class="col-auto footer-col">
+                        <div class="footer-col-title">Contáctanos</div>
+                        <ul class="footer-col-list">
+                            <li>hello@tourmate.com</li>
+                            <li>Dirección X</li>
+                        </ul>
+                        <!-- Apple Store image -->
+                        <img src="assets/images/apple.png" alt="Download on the App Store" class="store-badge mt-2" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

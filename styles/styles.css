@@ -1,0 +1,1039 @@
+/* Global resets & font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,body {
+    font-family: 'Manrope', sans-serif;
+    height: 100%;
+    min-height: 100vh; /* ensures at least the viewport height */
+    /* If you want a full-bleed hero, remove body margins */
+  }
+  .main-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+  .inner-container{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .my-margin-top-40 {
+    margin-top: 40px ;
+  }
+  .my-margin-top-90{
+    margin-top: 90px;
+  }
+  .text-gray {
+    color: #999999;
+}
+.bg-white-custom{
+  background-color: white !important;
+}
+.font-14{
+    font-size: 14px;
+}
+.font-12{
+    font-size: 12px;
+}
+.font-18{
+    font-size: 18px;
+}
+.font-22{
+    font-size: 22px;
+}
+  .my-margin-62{
+    margin-top: 62px;
+    margin-bottom: 62px;
+  }
+  /* NAVBAR STYLES */
+  .custom-navbar {
+    position: absolute; /* Make navbar sit on top of hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure it's above hero */
+    background:  linear-gradient(180deg, #FFFFFF 19.5%, rgba(255, 255, 255, 0.572816) 57%, rgba(255, 255, 255, 0) 90.5%);
+    padding: 0 104px;
+    margin-top: 15px;
+  }
+  
+  /* The text on the right in navbar */
+  .nav-text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  
+  /* Hero Section Wrapper */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    margin-top: 16px;
+    overflow: hidden; /* So absolutely positioned pseudo-elements don't break layout */
+  }
+  
+  
+  /* The gradient overlay on top of the hero image */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;           
+    background: linear-gradient(180deg, #FFFFFF 19.5%, rgba(255, 255, 255, 0.572816) 57%, rgba(255, 255, 255, 0) 90.5%);
+    z-index: 3; 
+  }
+    .hero-content {
+    position: relative;
+    z-index: 2; 
+    text-align: center; 
+  }
+    .hero-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+    width: 100%;
+    padding: 0 20px; /* Optional, for some horizontal spacing */
+  }
+  
+  .hero-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .hero-description {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 16px;
+  }
+  /* The main container for the entire search bar */
+.search-section {
+    width: 995px; 
+    height: 82px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px 0px #8DD3BB26;
+    padding-top: 16px;
+    padding-left: 36px;
+    padding-right: 24px;
+    padding-bottom: 10px;
+  }
+  
+  /* Each "title + description" column */
+  .search-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Heading style */
+  .search-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    color: #1C1B1F;
+  }
+  
+  /* Description style */
+  .search-desc {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #1C1B1F;
+    margin-top: 10px; /* gap between title and description */
+  }
+  
+  /* The custom spacing between columns (155px) */
+  .me-custom {
+    margin-right: 170px !important; 
+  }
+  
+  /* The blue search icon button on the right */
+  .search-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 100px; /* fully rounded */
+    background: #3070FE;
+  }
+  
+  /* Center the icon inside the wrapper */
+  .search-icon-wrapper img {
+    display: block;
+  }
+
+
+  /* tip tabs sections */
+
+  /* Make the entire row exactly 65px high */
+  .custom-nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* or 'nowrap' if you want single row */
+    max-width: 100%;
+    height: 53px; /* Set the height of the navbar */
+    border-bottom: 2px solid grey; /* Add a 2px solid grey border only at the bottom */
+}
+  
+  /* Each nav item: fixed width, center alignment, gap between icon & text */
+  .nav-item-link {
+    flex: 1 1 calc(100% / 7); /* 💡 Spread equally */
+    min-width: 70px;
+    max-width: 176px;    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 26.5px;
+  
+    /* Text styling per your specs */
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%; /* or 1 if you prefer */
+    letter-spacing: 0; /* or whatever your Figma specifies */
+    color: #000;       /* default text color */
+  
+    /* No bottom border by default; transitions for hover/active effect */
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  
+  /* The icon (24×24) */
+  .nav-item-link .icon {
+    width: 24px;
+    height: 24px;
+    /* If your icons are monochrome, you can color-tint them using a filter on hover/active.
+       Otherwise, you can provide separate colored SVGs for active states.
+    */
+  }
+  
+  /* Hover effect (optional): highlight text/icon */
+  .nav-item-link:hover {
+    color: #2C6DFB;
+  }
+  
+  /* ACTIVE state: border-bottom + text/icon color #2C6DFB */
+  .nav-item-link.active-link {
+    color: #2C6DFB;
+    border-bottom-color: #2C6DFB;
+    /* If you have a monochrome icon and want to tint it, 
+       you can use a filter here or swap the icon src.
+    */
+  }
+  
+  /* tendency section css */
+
+  /* Title styles */
+.tendencias-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    margin-bottom: 16px; /* some space before the description */
+  }
+  
+  /* Description styles */
+  .tendencias-desc {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0; /* remove default paragraph margin if desired */
+  }
+  
+  /* "Ver más tendencias" button */
+  .btn-ver-mas {
+    width: 215px;
+    height: 47px;
+    border-radius: 100px; /* pill-shaped */
+    border: 1px solid #156BF5;
+    background-color: transparent;
+    color: #156BF5;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  /* Hover/active effect (optional) */
+  .btn-ver-mas:hover {
+    background-color: #156BF5;
+    color: #fff;
+  }
+  
+
+  /* 8 image section css */
+  /* Flex container with 32px gap between items */
+.city-list {
+    display: flex;
+    gap: 32px; /* horizontal gap between each card and the arrow */
+  }
+  .conoce-city-list{
+    display: flex;
+    gap: 42px; /* horizontal gap between each card and the arrow */
+  }
+  
+  /* Each city item: image + label */
+  .city-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* The city image (126×126, 16px radius) */
+  .city-img {
+    width: 126px;
+    height: 126px;
+    border-radius: 16px;
+    object-fit: cover; /* so the image is cropped nicely */
+    margin-bottom: 12px; /* gap between image and label */
+  }
+  
+  /* City label text */
+  .city-label {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    margin-top: 12px;
+  }
+  
+  /* Arrow button: 56×56, white, rounded */
+  .arrow-overlay {
+    position: absolute;
+    top: 35px;      /* adjust as needed */
+    right: -35px;    /* adjust as needed */
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #2C6DFB; /* or 1px, if preferred */
+    cursor: pointer;           /* optional */
+    /* Optional small shadow if you want the icon to pop */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+
+  /* recomendados section css */
+
+  /* The card container with fixed width & height */
+.tour-card {
+    width: 286px;
+    height: 437px;
+    border-radius: 12px;
+    background-color: #fff;
+    overflow: hidden; /* ensure the image corners respect the card radius */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* optional subtle shadow */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #CAC4D0;
+  }
+  
+  /* The top image: 286×185 */
+  .tour-card .card-img-top {
+    width: 286px;
+    height: 185px;
+    object-fit: cover;
+  }
+  
+  /* Inner content with 16px padding */
+  .tour-card .card-body {
+    padding-top: 8px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+    flex: 1; /* let the content fill the vertical space */
+  }
+  
+  /* Special label */
+  .special-label {
+    width: 99px;
+    height: 20px;
+    border-radius: 8px;
+    background-color: #DBE1FF; /* or your chosen color */
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Location text (City, Country) */
+  .location-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+  
+  /* Tour title (Tour name, special city) */
+  .tour-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+  
+  /* Category (Category • 1.2 miles away) */
+  .tour-category {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+  
+  /* Rating line (star + score, total reviews) */
+  .rating-score {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 28px;
+  }
+  
+  
+  /* Price (From $50) */
+  .tour-price {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+  
+  /* Description text */
+  .tour-desc {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px; /* or "Body Medium/Size" from your design system */
+    line-height: 1.5; /* or "Body Medium/Line Height" */
+    letter-spacing: 0.25px; /* if that's your "Body Medium/Tracking" */
+    color: #333;
+  }
+ 
+  /* del mundo section */
+
+  /* Orange background container */
+.orange-section {
+    width: 1000px;
+    height: 313px;
+    background: #FF5C01;
+    padding: 45px 0 45px 82px; /* top:45, right:0, bottom:45, left:82 */
+    border-radius: 9999px;    /* or 156.5px for an exact elliptical shape */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Map image on the left */
+  .map-image {
+    width: 148px;
+    height: 191px;
+    object-fit: contain; /* or cover, if you prefer */
+    /* If you want the image perfectly centered vertically, it's 
+       already done via .d-flex.align-items-center on the parent. */
+  }
+  
+  /* Custom left margin to replicate a 38px gap from the image to the text */
+  .ms-custom {
+    margin-left: 38px;
+    color: #FFFFFF; /* text color white by default */
+  }
+  
+  /* Title styles */
+  .banner-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 0.5rem; /* small gap before the paragraph */
+    width: 528px;
+  }
+  
+  /* Description styles */
+  .banner-description {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%; /* 27px if 18px font-size */
+    margin-bottom: 1rem; /* gap before the button */
+    width: 591px;
+  }
+  
+  /* "Regístrate y Descubre" button */
+  .btn-register {
+    width: 217px;
+    height: 47px;
+    border: 1px solid #FFFFFF;
+    border-radius: 100px;
+    background: transparent;
+    color: #FFFFFF;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  /* Optional hover effect */
+  .btn-register:hover {
+    background-color: #fff;
+    color: #FF5C01;
+  }
+  
+
+  /* experiences section */
+
+  .recomendados-card {
+    width: 382px;
+    height: 163px;
+    border: 1px solid #ccc; /* or your chosen border color */
+    border-radius: 12px;
+    overflow: hidden; 
+  }
+  
+  /* Left image wrapper (141×163) */
+  .image-wrapper {
+    width: 141px;
+    height: 163px;
+    position: relative;
+    flex-shrink: 0; /* so it doesn't shrink in flex layout */
+  }
+  
+  /* City image with full height and same border radius on left side */
+  .city-image {
+    width: 141px;
+    height: 163px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  .Conoce-city-image {
+    width: 117px;
+    height: 117px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  /* Heart icon (20×18.81) positioned at top-left corner (13px each) */
+  .heart-icon {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 20px;
+    height: 18.81px;
+  }
+  .recomendados-body {
+    width: 241px;
+    height: 163px;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  /* Location text */
+  .location-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+  
+  /* Tour title */
+  .experiencias-tour-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px; /* or 18px if you prefer */
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+  
+  /* Price */
+  .experience-tour-price {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    margin-top: 4px; /* slight spacing above price */
+  }
+  
+
+
+  /* testemonial section css */
+
+  /* The main section container, 1440×704 overall */
+.testimonial-section {
+    width: 100%;
+    max-width: 1440px; /* if you want to constrain it */
+    margin: 0 auto;
+    height: 704px;
+    overflow: hidden; /* so background or content won't spill out */
+  }
+  
+  /* Left gradient (20% width) */
+  .left-gradient {
+    background: #F5F5F5;
+    z-index: 10; /* Ensure it's above hero */
+    height: 704px;
+
+    position: relative;
+  }
+  
+  /* Right side background image (80% width) */
+  .right-image {
+    background: url('../assets/images/userTestmonial.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    height: 704px;
+    width: 100%;
+    /* Remove z-index here or set it lower than the pseudo-element */
+  }
+  
+  .right-image::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      #F5F5F5 5%, 
+      rgba(245,245,245,0.57) 58.5%, 
+      rgba(245,245,245,0) 90%
+    );
+    z-index: 2; /* Make sure this is higher than the background */
+    pointer-events: none;
+  }
+  
+  
+  /* Comment icon above the first card */
+  .testimonial-card {
+    width: 285px;
+    height: 194px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-left: 105px;
+    margin-bottom: 25px;
+    position: relative; /* Required for z-index to work */
+    z-index: 20; /* Higher than .comment-icon's z-index (1) */
+}
+
+.comment-icon {
+    position: absolute;
+    top: 70px;
+    left: 170px;
+    width: 143px;
+    height: 109px;
+    z-index: 1; /* Lower than .testimonial-card */
+}
+  .testimonial-card2 {
+    width: 285px;
+    height: 194px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    position: relative; /* Required for z-index */
+    z-index: 10; /* Now higher than .right-image */
+  }
+  
+  /* User avatar (59×59) */
+  .user-img {
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .testimonial-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px; /* adjust if needed */
+    margin-bottom: 4px;
+  }
+  
+  /* Author text (Erika, Mar 2022) */
+  .testimonial-author {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+  }
+  
+  /* The big heading on the right side */
+  .testimonials-heading {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+    max-width: 500px;
+  }
+  
+  /* The main card container: 278×256 */
+.conoce-card {
+    width: 278px;
+    height: 256px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Top image: 278×120, border-radius:16px */
+  .conoce-card-img {
+    width: 272px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+  .Guías-card-img{
+    width: 100%;
+    height: 120px;
+    border-radius: 16px;
+    
+  }
+  
+  /* Label on top-right corner of the image */
+  .conoce-card-label {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 108px;
+    height: 20px;
+    border-radius: 8px;
+    background: #DBE1FF;
+    color: #002A77;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Title: "Barcelona" */
+  .conoce-card-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 24px; /* e.g. "Title Large/Size" */
+    line-height: 28px; 
+    color: #1D1B20;
+  }
+  
+  /* Description text */
+  .conoce-card-desc {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px; /* "Body Medium/Size" */
+    line-height: 1.5; /* or 24px for 150% line-height */
+    color: #49454F;   /* On-Surface-Variant color */
+    margin-top: 4px;  /* small spacing under title */
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 28px; /* 28px between each card */
+  }
+  
+  .grid-card {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Guías-card {
+    width: 100%; /* full width of grid cell */
+    max-width: 100%; /* prevents overflow */
+  }
+  
+  .bottom-row {
+    width: 100%;         /* Takes the full width of the card’s content area */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* or space-between, etc. */
+  }
+  
+  /* Bottom row (icon + text + dot + text + arrow) */
+  .bottom-row .dot {
+    font-size: 20px; /* bigger so it’s centered visually */
+    line-height: 1;  /* keep dot from shifting vertically */
+    color: #49454F;
+  }
+  
+  /* "Catalán" + "23 min" text style */
+  .language-text, .time-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px; /* "Body Small/Size" if that's your design system */
+    line-height: 16px;
+    letter-spacing: 0; /* or "Body Small/Tracking" if needed */
+    color: #49454F;
+  }
+  
+
+
+  /* newslatter section  */
+
+  /* The pill-shaped newsletter container: 1232×362, radius=250px */
+.newsletter-banner {
+    width: 1232px;
+    height: 362px;
+    border-radius: 250px;
+    background-color: #3070FE; /* or your desired "blue" */
+    overflow: visible;
+    position: relative;
+    display: flex;
+  }
+  .above-the-footer{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -250px; /* Pull the newsletter UP by 100px from the footer’s top */
+    z-index: 10; /* Ensure it's on top of the footer */
+  }
+  
+  .left-content {
+    padding: 65px 0 65px 165px; /* top right bottom left */
+    flex: 1; /* Let the left side fill available space until the right side's width */
+    color: #fff;
+  }
+  
+  .right-content {
+    padding: 55px 165px 55px 32px; 
+    flex-shrink: 0; /* so it doesn’t shrink when resizing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* The newsletter image (302×252) */
+  .newsletter-image {
+    width: 302px;
+    height: 252px;
+    object-fit: contain; /* or cover, depending on your design */
+  }
+  
+  /* Title: "Suscríbete al Newsletter" (Manrope 700, 44px, line-height 54px) */
+  .newsletter-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 54px;
+    margin: 0;
+  }
+  
+  /* Sub-title: "Te acompañamos en tu viaje" (Manrope 700, 20px) */
+  .newsletter-desc-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    margin: 0;
+  }
+  
+  /* Paragraph description (Manrope 500, 16px) */
+  .newsletter-desc {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    margin-top: 8px; /* small gap below sub-title */
+    max-width: 400px; /* optional, to keep lines shorter */
+  }
+  
+  .newsletter-input-wrapper {
+    width: 386px;
+    height: 56px;
+    border-radius: 100px; /* or 4px top corners if needed */
+    background-color: #fff; 
+    display: flex;
+    align-items: center;
+    padding: 0 8px; 
+  }
+  
+  .newsletter-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent; 
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #5B6771; 
+  }
+  
+  .btn-subscribe {
+    width: 139px;
+    height: 56px;
+    border: none;
+    border-radius: 100px;
+    background-color: #123480; 
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-subscribe:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  /* Footer background + sizing */
+.footer-section {
+  position: relative; 
+  width: 100%;
+  background: #123480;
+  color: #fff;
+  padding: 225px 104px 64px 104px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+  
+  .footer-container {
+    max-width: 1440px;
+  }
+  
+  .footer-logo {
+  width: auto;
+  height: 20px;
+  }
+  .flightfooter-logo{
+    width: 45px;
+    height: 33px; 
+  }
+  
+  .social-icon {
+    width: 21px;
+    height: 21px;
+  }
+  
+  .footer-col {
+    margin-right: 55px; 
+  }
+  
+  .footer-col-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    margin-bottom: 12px; 
+  }
+  
+  .footer-col-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-col-list li {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    opacity: 0.8;
+    margin-bottom: 12px; 
+  }
+  
+  .store-badge {
+    width: auto;  
+    height: 40px; 
+    display: block;
+  }
+  
+  @media (max-width: 991px) {
+    .footer-section {
+      padding: 64px; 
+    }
+    .footer-col {
+      margin-right: 32px;
+    }
+  }
+  
+
+
+  /* service page css */
+
+  /* The card image: 234×144, no background on the card itself */
+.ticket-img {
+    width: 234px;
+    height: 144px;
+    object-fit: cover; /* keep aspect ratio, fill the box */
+  }
+  
+  /* Ticket title (e.g. "Ticket Name") */
+  .ticket-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #1D1B20;
+    margin: 0; /* remove default h3 margin */
+  }
+  
+  .stars-icon {
+    width: 80px;  /* or adjust as needed */
+    height: auto;
+  }
+  .heart-icon-white {
+    width: 24px;
+    height: auto;
+  }
+  
+  .location-icon {
+    width: 16px;
+    height: 16px;
+  }
+  .dot {
+    font-weight: bold;
+    font-size: 16px; /* Adjust size as needed */
+}
+

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>service page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="main-container">
+    <!-- NAVBAR: visible only on desktop -->
+    <nav class="navbar navbar-expand-lg custom-navbar d-none d-md-block">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/icons/tourMateLogo.svg" alt="Tourmate Logo" height="40" />
+        </a>
+        <div class="d-flex align-items-center">
+          <span class="nav-text me-4">Conviértete en Proveedor</span>
+          <div class="d-flex gap-3">
+            <img src="assets/icons/userIcon.svg" alt="Users Icon" height="40" width="40" />
+            <img src="assets/icons/worldIcon.svg" alt="World Icon" height="40" width="40" />
+            <img src="assets/icons/iIcon.svg" alt="Info Icon" height="40" width="40" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION: visible only on desktop -->
+    <div class="hero-section d-none d-md-block">
+      <div class="hero-overlay">
+        <h1 class="hero-title">Explora, Conecta y Descubre</h1>
+        <p class="hero-description">Los mejores destinos te estan esperando.</p>
+        <div class="container-fluid d-flex justify-content-center mt-4">
+          <div class="search-section d-flex align-items-center">
+            <div class="search-item me-custom">
+              <span class="search-title">Cuál es tu destino</span>
+              <span class="search-desc">Busca un lugar</span>
+            </div>
+            <div class="search-item me-custom">
+              <span class="search-title">Cuál es tu destino</span>
+              <span class="search-desc">Busca un lugar</span>
+            </div>
+            <div class="search-item me-custom">
+              <span class="search-title">Cuál es tu destino</span>
+              <span class="search-desc">Busca un lugar</span>
+            </div>
+            <div class="search-icon-wrapper d-flex align-items-center justify-content-center">
+              <img src="assets/icons/searchIcon.svg" alt="Buscar" width="24" height="24" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-content">
+        <img src="assets/images/heroImage.png" alt="Hero Image" />
+      </div>
+    </div>
+    <!-- TICKET BANNER FOR MOBILE -->
+    <div class="d-flex align-items-center d-md-none bg-primary-mobile w-100"
+      style="height: 64px; padding: 8px 4px; gap: 4px;">
+      <img src="assets/icons/arrow-back.svg" alt="Back" width="24" height="24">
+      <span class="ticket-label-mobile">Tickets</span>
+    </div>
+
+    <div class="container my-3 d-none d-md-block">
+      <div class="row align-items-center custom-nav-bar">
+
+        <div class="col-auto nav-item-link ">
+          <img src="assets/icons/flightIcon.svg" class="icon" alt="Flight Icon">
+          <span class="label">TourMate</span>
+        </div>
+
+        <div class="col-auto nav-item-link active-link">
+          <img src="assets/icons/ticketIcon.png" class="icon" alt="Ticket Icon">
+          <span class="label">Tickets</span>
+        </div>
+
+        <div class="col-auto nav-item-link">
+          <img src="assets/icons/cupIcon.svg" class="icon" alt="Cup Icon">
+          <span class="label">Eventos</span>
+        </div>
+        <div class="col-auto nav-item-link">
+          <img src="assets/icons/hotelIcon.svg" class="icon" alt="Cup Icon">
+          <span class="label">Hoteles</span>
+        </div>
+
+        <div class="col-auto nav-item-link">
+          <img src="assets/icons/flagIcon.svg" class="icon" alt="Flag Icon">
+          <span class="label">Gulas</span>
+        </div>
+
+        <div class="col-auto nav-item-link">
+          <img src="assets/icons/routeIcon.svg" class="icon" alt="Route Icon">
+          <span class="label">Rutas</span>
+        </div>
+
+        <div class="col-auto nav-item-link">
+          <img src="assets/icons/virtualIcon.svg" class="icon" alt="Virtual Icon">
+          <span class="label">Virtual</span>
+        </div>
+      </div>
+    </div>
+    <div class="container my-3 my-sm-5 inner-container">
+      <div class="row align-items-center justify-content-between">
+
+        <!-- LEFT SIDE -->
+        <div class="col">
+          <div class="d-flex align-items-center gap-2">
+            <!-- Title -->
+            <h2 class="tendencias-title mb-0 mb-sm-3">Recomendados disponibles</h2>
+            <!-- Mobile arrow only -->
+            <img src="assets/icons/arrow-forward.svg" alt="Arrow" class="d-inline-block d-md-none"
+              style="width: 24px; height: 24px; opacity: 0.5;" />
+          </div>
+
+          <p class="tendencias-desc d-none d-md-block mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container my-2 my-sm-5 inner-container">
+      <div class="row flex-nowrap flex-sm-wrap gx-2 g-sm-4 overflow-auto">
+        <!-- Repeat this col/card 8 times total -->
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tendency section -->
+    <div class="container my-4 my-sm-5 inner-container">
+      <div class="row align-items-center justify-content-between">
+
+        <!-- LEFT SIDE -->
+        <div class="col">
+          <div class="d-flex align-items-center gap-2">
+            <!-- Title -->
+            <h2 class="tendencias-title mb-0 mb-sm-3">Tendencias Top</h2>
+            <!-- Mobile arrow only -->
+            <img src="assets/icons/arrow-forward.svg" alt="Arrow" class="d-inline-block d-md-none"
+              style="width: 24px; height: 24px; opacity: 0.5;" />
+          </div>
+
+          <!-- Description (hide on mobile) -->
+          <p class="tendencias-desc d-none d-md-block mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+        </div>
+        <!-- RIGHT SIDE: Button (hide on mobile) -->
+        <div class="col-auto d-none d-md-block">
+          <button class="btn-ver-mas">
+            Ver más tendencias
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container my-5 inner-container">
+      <div class="d-flex align-items-center city-list">
+
+        <div class="city-item text-center">
+          <img src="assets/images/tendency-pic.png" alt="Ciudad X" class="city-img">
+          <div class="city-label">Ciudad X</div>
+        </div>
+
+        <div class="city-item text-center">
+          <img src="assets/images/tendency-pic.png" alt="Lugar X" class="city-img">
+          <div class="city-label">Lugar X</div>
+        </div>
+
+        <div class="city-item text-center">
+          <img src="assets/images/tendency-pic.png" alt="Barcelona Z" class="city-img">
+          <div class="city-label">Barcelona Z</div>
+        </div>
+
+        <div class="city-item text-center">
+          <img src="assets/images/tendency-pic.png" alt="España W" class="city-img">
+          <div class="city-label">España W</div>
+        </div>
+
+        <div class="city-item text-center">
+          <img src="assets/images/tendency-pic.png" alt="Lugar Y" class="city-img">
+          <div class="city-label">Lugar Y</div>
+        </div>
+
+        <div class="city-item text-center">
+          <img src="assets/images/tendency-pic.png" alt="Barcelona Z" class="city-img">
+          <div class="city-label">Barcelona Z</div>
+        </div>
+
+        <div class="city-item text-center">
+          <img src="assets/images/tendency-pic.png" alt="Ciudad X" class="city-img">
+          <div class="city-label">Ciudad X</div>
+        </div>
+
+        <div class="city-item text-center position-relative">
+          <img src="assets/images/tendency-pic.png" alt="España W" class="city-img">
+          <div class="city-label">España W</div>
+
+          <div class="arrow-overlay d-flex align-items-center justify-content-center d-none d-md-block">
+            <img src="assets/icons/rightArrowIcon.svg" alt="Arrow" width="30" height="30">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5 inner-container">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="d-flex align-items-center gap-2">
+            <!-- Title -->
+            <h2 class="tendencias-title mb-0 mb-sm-3">Tickets disponibles</h2>
+            <!-- Mobile arrow only -->
+            <img src="assets/icons/arrow-forward.svg" alt="Arrow" class="d-inline-block d-md-none"
+              style="width: 24px; height: 24px; opacity: 0.5;" />
+          </div>
+          <p class="tendencias-desc d-none d-md-block mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ticket section -->
+    <div class="container inner-container ticker-section" style="margin-bottom: 280px; margin-top: 55px;">
+
+      <!-- Repeat each .row 6 times (2 cards per row) for a total of 12 cards -->
+
+      <!-- Row 1 -->
+      <div class="row g-0 border-bottom" style="border-color: #CAC4D0;">
+        <!-- Card 1 -->
+        <div class="col-12  col-xxl-6 p-3 d-flex">
+          <!-- Left Image -->
+          <img src="assets/images/ticketImage.png" alt="Ticket Image" class="me-3 ticket-img" />
+          <!-- Right Content -->
+          <div class="flex-grow-1">
+            <!-- Top row: Title + stars + heart -->
+            <div class="d-flex align-items-center justify-content-between">
+              <h3 class="ticket-title mb-0">Ticket Name</h3>
+              <img src="assets/icons/starIcon.svg" alt="Stars Icon" class="stars-icon" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon-white" width="30" height="30" />
+            </div>
+            <!-- City, Country -->
+            <div class="d-flex align-items-center mt-1">
+              <img src="assets/icons/locationIcon.svg" alt="Location Icon" class="me-1 location-icon" />
+              <span class="location-text">City, Country</span>
+            </div>
+            <div class="tour-category mt-1">Category • 1.2 miles away</div>
+
+            <!-- Description -->
+            <p class="tour-desc mt-2">
+              Supporting line text lorem ipsum dolor, Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor...
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-xxl-6 p-3 d-flex">
+          <img src="assets/images/ticketImage.png" alt="Ticket Image" class="me-3 ticket-img" />
+          <div class="flex-grow-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <h3 class="ticket-title mb-0">Ticket Name</h3>
+              <img src="assets/icons/starIcon.svg" alt="Stars Icon" class="stars-icon" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon-white" width="30" height="30" />
+            </div>
+            <div class="d-flex align-items-center mt-1">
+              <img src="assets/icons/locationIcon.svg" alt="Location Icon" class="me-1 location-icon" />
+              <span class="location-text">City, Country</span>
+            </div>
+            <div class="tour-category mt-1">Category • 1.2 miles away</div>
+
+            <p class="tour-desc mt-2">
+              Supporting line text lorem ipsum dolor, Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor...
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0 border-bottom" style="border-color: #CAC4D0;">
+        <!-- Card 1 -->
+        <div class="col-12 col-xxl-6 p-3 d-flex">
+          <!-- Left Image -->
+          <img src="assets/images/ticketImage.png" alt="Ticket Image" class="me-3 ticket-img" />
+          <!-- Right Content -->
+          <div class="flex-grow-1">
+            <!-- Top row: Title + stars + heart -->
+            <div class="d-flex align-items-center justify-content-between">
+              <h3 class="ticket-title mb-0">Ticket Name</h3>
+              <img src="assets/icons/starIcon.svg" alt="Stars Icon" class="stars-icon" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon-white" width="30" height="30" />
+            </div>
+            <!-- City, Country -->
+            <div class="d-flex align-items-center mt-1">
+              <img src="assets/icons/locationIcon.svg" alt="Location Icon" class="me-1 location-icon" />
+              <span class="location-text">City, Country</span>
+            </div>
+            <div class="tour-category mt-1">Category • 1.2 miles away</div>
+
+            <!-- Description -->
+            <p class="tour-desc mt-2">
+              Supporting line text lorem ipsum dolor, Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor...
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-xxl-6 p-3 d-flex">
+          <img src="assets/images/ticketImage.png" alt="Ticket Image" class="me-3 ticket-img" />
+          <div class="flex-grow-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <h3 class="ticket-title mb-0">Ticket Name</h3>
+              <img src="assets/icons/starIcon.svg" alt="Stars Icon" class="stars-icon" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon-white" width="30" height="30" />
+            </div>
+            <div class="d-flex align-items-center mt-1">
+              <img src="assets/icons/locationIcon.svg" alt="Location Icon" class="me-1 location-icon" />
+              <span class="location-text">City, Country</span>
+            </div>
+            <div class="tour-category mt-1">Category • 1.2 miles away</div>
+
+            <p class="tour-desc mt-2">
+              Supporting line text lorem ipsum dolor, Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor...
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0 border-bottom" style="border-color: #CAC4D0;">
+        <!-- Card 1 -->
+        <div class="col-12 col-xxl-6 p-3 d-flex">
+          <!-- Left Image -->
+          <img src="assets/images/ticketImage.png" alt="Ticket Image" class="me-3 ticket-img" />
+          <!-- Right Content -->
+          <div class="flex-grow-1">
+            <!-- Top row: Title + stars + heart -->
+            <div class="d-flex align-items-center justify-content-between">
+              <h3 class="ticket-title mb-0">Ticket Name</h3>
+              <img src="assets/icons/starIcon.svg" alt="Stars Icon" class="stars-icon" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon-white" width="30" height="30" />
+            </div>
+            <!-- City, Country -->
+            <div class="d-flex align-items-center mt-1">
+              <img src="assets/icons/locationIcon.svg" alt="Location Icon" class="me-1 location-icon" />
+              <span class="location-text">City, Country</span>
+            </div>
+            <div class="tour-category mt-1">Category • 1.2 miles away</div>
+
+            <!-- Description -->
+            <p class="tour-desc mt-2">
+              Supporting line text lorem ipsum dolor, Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor...
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-xxl-6 p-3 d-flex">
+          <img src="assets/images/ticketImage.png" alt="Ticket Image" class="me-3 ticket-img" />
+          <div class="flex-grow-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <h3 class="ticket-title mb-0">Ticket Name</h3>
+              <img src="assets/icons/starIcon.svg" alt="Stars Icon" class="stars-icon" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon-white" width="30" height="30" />
+            </div>
+            <div class="d-flex align-items-center mt-1">
+              <img src="assets/icons/locationIcon.svg" alt="Location Icon" class="me-1 location-icon" />
+              <span class="location-text">City, Country</span>
+            </div>
+            <div class="tour-category mt-1">Category • 1.2 miles away</div>
+
+            <p class="tour-desc mt-2">
+              Supporting line text lorem ipsum dolor, Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor...
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0 border-bottom" style="border-color: #CAC4D0;">
+        <!-- Card 1 -->
+        <div class="col-12 col-xxl-6 p-3 d-flex">
+          <!-- Left Image -->
+          <img src="assets/images/ticketImage.png" alt="Ticket Image" class="me-3 ticket-img" />
+          <!-- Right Content -->
+          <div class="flex-grow-1">
+            <!-- Top row: Title + stars + heart -->
+            <div class="d-flex align-items-center justify-content-between">
+              <h3 class="ticket-title mb-0">Ticket Name</h3>
+              <img src="assets/icons/starIcon.svg" alt="Stars Icon" class="stars-icon" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon-white" width="30" height="30" />
+            </div>
+            <!-- City, Country -->
+            <div class="d-flex align-items-center mt-1">
+              <img src="assets/icons/locationIcon.svg" alt="Location Icon" class="me-1 location-icon" />
+              <span class="location-text">City, Country</span>
+            </div>
+            <div class="tour-category mt-1">Category • 1.2 miles away</div>
+
+            <!-- Description -->
+            <p class="tour-desc mt-2">
+              Supporting line text lorem ipsum dolor, Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor...
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-xxl-6 p-3 d-flex">
+          <img src="assets/images/ticketImage.png" alt="Ticket Image" class="me-3 ticket-img" />
+          <div class="flex-grow-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <h3 class="ticket-title mb-0">Ticket Name</h3>
+              <img src="assets/icons/starIcon.svg" alt="Stars Icon" class="stars-icon" />
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" class="heart-icon-white" width="30" height="30" />
+            </div>
+            <div class="d-flex align-items-center mt-1">
+              <img src="assets/icons/locationIcon.svg" alt="Location Icon" class="me-1 location-icon" />
+              <span class="location-text">City, Country</span>
+            </div>
+            <div class="tour-category mt-1">Category • 1.2 miles away</div>
+
+            <p class="tour-desc mt-2">
+              Supporting line text lorem ipsum dolor, Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor...
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <footer class="footer-section position-relative">
+    <!-- newsaltter section -->
+    <div class="container my-5 d-flex justify-content-center inner-container above-the-footer">
+      <!-- Outer pill-shaped banner -->
+      <div class="newsletter-banner d-flex align-items-center">
+
+        <!-- Left Column (text & input) -->
+        <div class="left-content">
+          <h2 class="newsletter-title">Suscríbete al Newsletter</h2>
+          <h3 class="newsletter-desc-title mt-3">Te acompañamos en tu viaje</h3>
+          <p class="newsletter-desc">
+            Estás en camino de explorar y descubrir nuevos lugares conectando
+            con viajeros de todas partes del mundo.
+          </p>
+
+          <!-- Input + Button Row -->
+          <div class="d-flex align-items-center gap-3 mt-3">
+            <!-- Input field -->
+            <div class="newsletter-input-wrapper">
+              <input type="text" class="newsletter-input" placeholder="Escribe tu email y recibe actualizaciones" />
+            </div>
+            <!-- Button -->
+            <button class="btn-subscribe">
+              Suscríbeme
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column (image) -->
+        <div class="right-content d-flex align-items-center justify-content-center">
+          <img src="assets/images/newslatterImage.png" alt="Newsletter Image" class="newsletter-image" />
+        </div>
+
+      </div>
+    </div>
+    <div class="container-fluid px-0">
+      <div class="footer-container mx-auto">
+        <div class="row g-0">
+
+          <!-- 1) Left Column: Logos + Social Icons -->
+          <!-- Column for Logos + Social Icons -->
+          <div class="col-auto d-flex flex-column justify-content-start align-items-center">
+            <!-- Flight Logo (top) -->
+            <img src="assets/images/tFlight.png" alt="Flight Logo" class="flightfooter-logo mb-2" />
+
+            <!-- Tour Logo (bottom) -->
+            <img src="assets/images/tourLogoFooter.png" alt="Tour Logo" class="footer-logo" />
+
+            <!-- Social Icons (24px margin-top from logos) -->
+            <div class="d-flex align-items-center mt-3" style="gap: 12px;">
+              <img src="assets/icons/fb.svg" alt="Facebook" class="social-icon" />
+              <img src="assets/icons/insta.svg" alt="Instagram" class="social-icon" />
+              <img src="assets/icons/x.svg" alt="X (Twitter)" class="social-icon" />
+              <img src="assets/icons/youtube.svg" alt="YouTube" class="social-icon" />
+            </div>
+          </div>
+
+
+          <!-- Spacer to match the 140px margin from the left col to the next col -->
+          <div class="col-auto d-none d-lg-flex" style="width:140px;"></div>
+
+          <!-- 2) Nuestros Destinos -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Nuestros Destinos</div>
+            <ul class="footer-col-list">
+              <li>Canadá</li>
+              <li>Alaska</li>
+              <li>France</li>
+              <li>Iceland</li>
+            </ul>
+          </div>
+
+          <!-- 3) Actividades Top -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Actividades Top</div>
+            <ul class="footer-col-list">
+              <li>Auroras boreales</li>
+              <li>Crucero y Navegación</li>
+              <li>Multi-actividades</li>
+              <li>Kayak</li>
+            </ul>
+          </div>
+
+          <!-- 4) Viajes y Hoteles -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Viajes y Hoteles</div>
+            <ul class="footer-col-list">
+              <li>Bali Guía de Viaje</li>
+              <li>Sri Lanka Guía de Viaje</li>
+              <li>Perú Guía de Viaje</li>
+              <li>Bali Guía de Viaje</li>
+            </ul>
+          </div>
+
+          <!-- 5) Sobre Nosotros -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Sobre Nosotros</div>
+            <ul class="footer-col-list">
+              <li>Nuestra Historia</li>
+              <li>Somos TourMate</li>
+            </ul>
+            <!-- Google Play image -->
+            <img src="assets/images/google.png" alt="Get it on Google Play" class="store-badge mt-2" />
+          </div>
+
+          <!-- 6) Contáctanos -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Contáctanos</div>
+            <ul class="footer-col-list">
+              <li>hello@tourmate.com</li>
+              <li>Dirección X</li>
+            </ul>
+            <!-- Apple Store image -->
+            <img src="assets/images/apple.png" alt="Download on the App Store" class="store-badge mt-2" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

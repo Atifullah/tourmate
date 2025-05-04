@@ -1,0 +1,647 @@
+.item-main-container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 104px;
+}
+.custom-navbar-item{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure it's above hero */
+    background:  linear-gradient(180deg, #FFFFFF 19.5%, rgba(255, 255, 255, 0.572816) 57%, rgba(255, 255, 255, 0) 90.5%);
+    margin-top: 15px;
+}
+
+/* Ticket category text (small, bold) */
+.ticket-category {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 14px; /* or 0.875rem */
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    margin: 0 0 4px; /* small space below if needed */
+  }
+  
+  /* Large heading: "Lugar de Ticket" */
+  .ticket-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 1.2; /* or your "Title Large/Line Height" */
+    letter-spacing: 0; /* or "Title Large/Tracking" if specified */
+    color: #000;       /* adjust as needed */
+    margin: 0;
+  }
+  
+  /* Heart icon styling (optional) */
+  .heart-icon {
+    width: 20px; 
+    height: auto;
+    cursor: pointer;
+  }
+  
+  /* "Bookmark" text next to heart icon */
+  .bookmark-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: #2C6DFB; /* per your requirement */
+    cursor: pointer; /* optional if clickable */
+  }
+  
+
+  /* Outer container for the two-part layout */
+.images-grid-wrapper {
+    display: grid;
+    grid-template-columns: auto auto; /* Left big image & right grid */
+    gap: 8px;
+    align-items: start;
+  }
+  
+  /* Big image on the left */
+  .big-image {
+    width: 613px;
+    height: 360px;
+    min-width: 370px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+  .big-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .special-offer-label {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    background-color: rgba(0,0,0,0.5); /* Adjust color as needed */
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* Right grid: 3 columns x 2 rows, with an 8px gap */
+  .right-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 8px;
+  }
+  
+  /* Image sizes per specification */
+  /* Image #2: width: ~117px, height: 176px */
+  .img-2 {
+    width: 117px;
+    height: 176px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .img-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Image #3: width: 185px, height: 176px */
+  .img-3 {
+    width: 185px;
+    height: 176px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .img-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Image #4: width: 185.074px, height: 176px */
+  .img-4 {
+    width: 250px;
+    height: 176px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .img-4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Image #5: width: ~117px, height: 176px */
+  .img-5 {
+    width: 117px;
+    height: 176px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .img-5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Image #6: width: 250px, height: 176px, min-width: 250px */
+  .img-6 {
+    width: 185px;
+    height: 176px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .img-6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Image #7: width: 250px, height: 176px, min-width: 250px */
+  .img-7 {
+    width: 250px;
+    height: 176px;
+    min-width: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+     position: relative;
+  }
+  .img-7 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .plus-label {
+    top: 139px;
+    right: 12px;
+    background-color: #DBE1FF; /* or your chosen color */
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* Utility to ensure images fill their container while preserving aspect ratio */
+  .object-cover {
+    object-fit: cover;
+  }
+
+
+  /* ------------- LEFT COLUMN ------------- */
+
+/* City, Country text + $$-$$$ + star rating, 16px font */
+.location-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000; /* adjust as needed */
+  }
+  
+  /* Star rating number (e.g. 4.590) */
+  .rating-number {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  /* Provider row: "Proveedor: Oficial de TourMate" 
+     "Proveedor:" in black, "Oficial de TourMate" in a background color #2C6DFB. 
+  */
+  .provider-row {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  /* "Oficial de TourMate" label */
+  .provider-label {
+    color: #2C6DFB;
+  }
+  
+  /* Description text */
+  .description-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 0; /* adjust as needed */
+  }
+  
+  /* SOBRE EL ITEM heading (14px, bold) */
+  .sobre-item-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    margin: 0;
+  }
+  
+  /* Each bullet item: 
+     e.g. "Cancelación gratuita" (16px Title Medium),
+     "Cancela antes de 24 horas" (12px Body Medium)
+  */
+  .cancel-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px; /* Title Medium/Size */
+    line-height: 20px;
+    color: #000;
+  }
+  
+  .cancel-desc {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 12px; /* Body Medium/Size */
+    line-height: 16px;
+    color: #333;
+  }
+  
+  
+  /* ------------- RIGHT COLUMN (CARD) ------------- */
+  
+  .info-card {
+    width: 402px;
+    height: 284px; /* initial height */
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 30px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow: hidden; /* so content doesn't overflow the smaller height initially */
+    transition: height 0.4s ease; /* smooth expand */
+  }
+  
+  /* When expanded, height = 700px */
+  .info-card.expanded {
+    height: 650px;
+  }
+  
+  /* Price: "$50 por persona" */
+  .price-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 14px; /* from your prompt, though 14px might be quite small for line-height */
+    letter-spacing: 0.25px;
+    color: #000;
+    margin: 0;
+  }
+  
+  .small-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px; /* or 14px if you want smaller */
+    line-height: 14px;
+    margin-left: 4px; /* small space after $50 */
+  }
+  
+  /* "Selecciona fecha y participantes" (18px bold) */
+  .select-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  /* The custom dropdown fields (347×40) */
+  .dropdown-field {
+    width: 347px;
+    height: 40px;
+    border: 1px solid #ccc; /* or #000 if needed */
+    border-radius: 8px;
+    padding: 7px 16px;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+  
+  /* The text inside the dropdown */
+  .dropdown-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+  }
+  
+  /* The button (336×41, radius=100px) */
+  .btn-availability {
+    width: 336px;
+    height: 41px;
+    border: none;
+    border-radius: 100px;
+    background-color: #3070FE; /* or your brand color */
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 16px; /* 16px gap from last dropdown */
+    align-self: center; /* center horizontally if desired */
+  }
+  .btn-availability:hover {
+    background-color: #2050CE; /* darker on hover */
+  }
+  
+  /* "DETALLES DEL ITEM" heading (Manrope 700, 14px) */
+.detalles-item {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    margin-bottom: 16px;
+  }
+  
+  /* Each section container: top/bottom=16px, right=30px, left=0, bottom border */
+  .detail-section {
+    padding: 16px 30px 16px 0; /* top right bottom left */
+    border-bottom: 1px solid #CAC4D0; /* var(--Schemes-Outline-Variant) */
+  }
+  
+  /* Section title (24px, bold) */
+  .content-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 24px; /* Title Large/Size */
+    line-height: 1.3; /* or your Title Large/Line Height */
+    letter-spacing: 0; /* or "Title Large/Tracking" if you have a value */
+    margin: 0 0 8px; /* small space below the title */
+  }
+  
+  /* Description text (16px) */
+  .content-description {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px; /* Body Medium/Size */
+    line-height: 1.5; /* or "Body Medium/Line Height" */
+    letter-spacing: 0; /* or "Body Medium/Tracking" */
+    color: #333;
+    margin: 0;
+  }
+  
+  /* UL style if you prefer bullet points for "Incluye" etc. */
+  .content-description li {
+    margin-bottom: 6px;
+  }
+  
+  /* Links row at the bottom of the last section */
+  .links-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Each link (16px, underline, #2C6DFB) */
+  .item-link {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px; /* Body Medium/Size */
+    line-height: 1.5;
+    letter-spacing: 0; /* Body Medium/Tracking */
+    text-decoration: underline;
+    color: #2C6DFB;
+  }
+  
+  
+  /********** Rating Summary **********/
+  /* Big rating number (4.5) */
+  .rating-big {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 54px; /* Title Large/Size */
+    /* line-height: (Title Large/Line Height) – you can set 1.1 or 1.2 as needed */
+    letter-spacing: 0; /* or "Title Large/Tracking" if you have a specific value */
+    color: #000;
+    margin: 0;
+  }
+  
+  /* "120 Reseñas" text (14px) */
+  .total-reviews {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #000;
+  }
+  
+  /********** Star Breakdown **********/
+  /* e.g. "5 Estrellas", "4 Estrellas" (14px) */
+  .star-count {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #000;
+    margin: 0;
+  }
+  
+  /* The line icon to the right of each star count if needed */
+  .line-icon {
+    /* If you need specific sizing or spacing, adjust here */
+    height: auto;
+  }
+  
+  /********** Reseñas Heading (14px) **********/
+  .reseñas-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: #000;
+    margin: 0;
+  }
+  
+
+  
+  /* The review’s star icon row + title (16px bold, #49454F) */
+  .review-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: #49454F;
+  }
+  
+  /* The review description (14px, #49454F) 
+     (User said "Body Medium/Size" which might be 16px or 14px – adjust as needed) */
+  .review-description {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px; /* or 16px if your Body Medium is 16 */
+    line-height: 1.5; /* or "Body Medium/Line Height" */
+    color: #49454F;
+    margin: 0;
+  }
+  
+  /* The review author line (12px, #919191) */
+  .review-author {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: #919191; /* or #919191 background with white text if you prefer? */
+  }
+  
+  /********** "Ver todas las reseñas" link **********/
+  .reviews-link {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #3070FE; /* or #2C6DFB if that’s your brand color */
+  }
+  
+  /********** Product Info at Bottom **********/
+  .product-info p {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .item-city-list {
+    display: flex;
+    gap: 28px; /* horizontal gap between each card and the arrow */
+  }
+  
+  /* Sub-item differential container */
+.sub-item-diff {
+    width: 346px;
+    border: 1px solid #CAC4D0;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-top: 16px;
+    box-sizing: border-box;
+    display: none; /* Hidden by default */
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Circle checkbox (radio) */
+  .circle-radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #CAC4D0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  .circle-radio.active {
+    background-color: #2C6DFB;
+    border-color: #2C6DFB;
+  }
+  
+  /* When circle is active, also change parent's border color */
+  .sub-item-diff.active {
+    border-color: #2C6DFB;
+  }
+  
+  /* Sub-item description */
+  .sub-item-desc {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 8px; /* Reduced gap */
+  }
+  
+  /* Sub-item paragraph */
+  .sub-item-paragraph {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 8px;
+    color: #000;
+  }
+  
+  /* Time labels container: horizontal flex, scrollable if needed */
+  .time-labels-container {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-top: 8px;
+    padding-bottom: 20px;
+  }
+  
+  /* Each time label */
+  .time-label {
+    flex: 0 0 auto;
+    width: 94px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--Schemes-Outline-Variant, #CAC4D0);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* "Total $150" line */
+  .sub-item-total {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    vertical-align: middle;
+    color: #000;
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #CAC4D0;
+  }
+  .sub-item-title{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  /* Sub-item subtext */
+  .sub-item-subtext {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    vertical-align: middle;
+    color: #000;
+    margin-top: 4px;
+  }
+  .btn-schedule {
+    width: 336px;
+    height: 41px;
+    border: none;
+    border-radius: 100px;
+    background-color: #2C6DFB;
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 16px;
+    align-self: center;
+    display: none; /* hidden by default */
+  }  

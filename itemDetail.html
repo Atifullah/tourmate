@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>item detail page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/itemDetail.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="item-main-container">
+    <div>
+      <nav class="navbar navbar-expand-lg custom-navbar-item d-none d-md-block">
+        <div class="container-fluid p-0">
+          <!-- Logo on the left -->
+          <a class="navbar-brand" href="#">
+            <img src="assets/icons/tourMateLogo.svg" alt="Tourmate Logo" height="40" />
+          </a>
+
+          <!-- Right side -->
+          <div class="d-flex align-items-center">
+            <!-- Text -->
+            <span class="nav-text me-4">Conviértete en Proveedor</span>
+            <!-- Icons -->
+            <div class="d-flex gap-3">
+              <img src="assets/icons/userIcon.svg" alt="Users Icon" height="40" width="40" />
+              <img src="assets/icons/worldIcon.svg" alt="World Icon" height="40" width="40" />
+              <img src="assets/icons/iIcon.svg" alt="Info Icon" height="40" width="40" />
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile Only Slider -->
+      <div class="carousel-container d-block d-xl-none position-relative w-100 mt-4">
+        <!-- Back Icon -->
+        <img src="assets/icons/backIcon.svg" alt="Back" class="slider-back-icon" width="24px" height="24px" />
+
+        <!-- Carousel -->
+        <div id="imageSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img src="assets/images/item-image1.png" class="d-block w-100 slider-img" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/item-image2.png" class="d-block w-100 slider-img" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/item-image3.png" class="d-block w-100 slider-img" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/item-image4.png" class="d-block w-100 slider-img" alt="Image 4">
+            </div>
+            <!-- Add more if needed -->
+          </div>
+
+          <!-- Indicators -->
+          <!-- <div class="carousel-indicators mt-2 position-absolute bottom-0 start-50 translate-middle-x">
+          <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-2 my-sm-5">
+      <div class="row">
+        <div class="col">
+          <h6 class="ticket-category">Ticket-category</h6>
+          <div class="d-flex align-items-center justify-content-between">
+            <h1 class="ticket-title mb-0">Lugar de Ticket</h1>
+            <div class="d-none d-md-flex align-items-center gap-2">
+              <span></span>
+              <img src="assets/icons/heartIcon.svg" alt="Heart Icon" />
+              <span class="bookmark-text">Bookmark</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 px-3 my-5 d-none d-xl-block">
+      <div class="images-grid-wrapper">
+        <!-- Big Image on the left -->
+        <div class="big-image">
+          <img src="assets/images/item-image1.png" alt="Big Image" />
+          <div class="special-offer-label">Oferta Especial</div>
+        </div>
+
+        <!-- Right side: a grid with 3 columns x 2 rows -->
+        <div class="right-grid">
+          <!-- Column 1, Row 1: Image #2 -->
+          <div class="img-2">
+            <img src="assets/images/item-image2.png" alt="Image 2" />
+          </div>
+          <!-- Column 2, Row 1: Image #3 -->
+          <div class="img-3">
+            <img src="assets/images/item-image3.png" alt="Image 3" />
+          </div>
+          <!-- Column 3, Row 1: Image #4 -->
+          <div class="img-4">
+            <img src="assets/images/item-image4.png" alt="Image 4" />
+          </div>
+          <!-- Column 1, Row 2: Image #5 -->
+          <div class="img-5">
+            <img src="assets/images/item-image5.png" alt="Image 5" />
+          </div>
+          <!-- Column 2, Row 2: Image #6 -->
+          <div class="img-6">
+            <img src="assets/images/item-image6.png" alt="Image 6" />
+          </div>
+          <!-- Column 3, Row 2: Image #7 with +23 label -->
+          <div class="img-7">
+            <img src="assets/images/item-image7.png" alt="Image 7" />
+            <div class="plus-label position-absolute d-flex align-items-center gap-1">
+              <img src="assets/icons/galleryIcon.svg" alt="Gallery Icon" width="16" height="16" />
+              <span>+23</span>
+              <!-- Optional gallery icon -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container my-5">
+      <div class="row">
+        <!-- Left Column (text) -->
+        <div class="col-md-6">
+
+          <!-- Location row: City, Country + distance + price range -->
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+            <span class="location-text">
+              City, Country • Entre 5 millas • $$-$$$
+            </span>
+
+          </div>
+
+          <!-- Provider row: "Proveedor: Oficial de TourMate" -->
+          <div class="provider-row mb-3">
+            <span class="fw-medium">Proveedor: </span>
+            <span class="provider-label me-5">Oficial de TourMate</span>
+            <!-- Star rating + number -->
+            <img src="assets/icons/starIcon.svg" alt="Stars" width="80" height="16" class="ms-auto me-1" />
+            <span class="rating-number">4.590</span>
+          </div>
+
+          <!-- Some paragraphs or placeholder text for description -->
+          <p class="description-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+          </p>
+
+          <!-- "SOBRE EL ITEM" heading -->
+          <h6 class="sobre-item-title mt-4">SOBRE EL ITEM</h6>
+
+          <!-- Example bullet point 1 -->
+          <div class="d-flex align-items-start mt-3 gap-3">
+            <img src="assets/icons/MonogramIcon.svg" alt="Calendar Icon" width="46" height="46" />
+            <div>
+              <div class="cancel-title mb-2">Cancelación gratuita</div>
+              <div class="cancel-desc">Cancela antes de 24 horas</div>
+            </div>
+          </div>
+
+          <!-- Example bullet point 2 -->
+          <div class="d-flex align-items-start mt-3 gap-3">
+            <img src="assets/icons/MonogramIcon.svg" alt="Calendar Icon" width="46" height="46" />
+            <div>
+              <div class="cancel-title mb-2">Recorrido de XX millas</div>
+              <div class="cancel-desc">Información extra del recorrido</div>
+            </div>
+          </div>
+
+          <!-- Example bullet point 3 -->
+          <div class="d-flex align-items-start mt-3 gap-3">
+            <img src="assets/icons/MonogramIcon.svg" alt="Calendar Icon" width="46" height="46" />
+            <div>
+              <div class="cancel-title mb-2">Recorrido de XX millas</div>
+              <div class="cancel-desc">Información extra del recorrido</div>
+            </div>
+          </div>
+
+
+          <div class="container my-5">
+
+            <!-- "DETALLES DEL ITEM" heading -->
+            <h6 class="detalles-item">DETALLES DEL ITEM</h6>
+
+            <!-- Section 1: Descripción completa -->
+            <div class="detail-section d-none d-md-block">
+              <h2 class="content-title">Descripción completa</h2>
+              <p class="content-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                <br><br>
+                Lorem ipsum dolor sit, consectetur adipiscing elit<br>
+                Lorem dolor sit amet, consectetur adipiscing elit<br>
+                Lorem ipsum dolor sit amet, consectetur elit
+                <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </p>
+            </div>
+
+            <!-- Section 2: Incluye -->
+            <div class="detail-section d-none d-md-block">
+              <h2 class="content-title">Incluye</h2>
+              <ul class="content-description">
+                <li>Lorem ipsum dolor sit, consectetur adipiscing elit</li>
+                <li>Lorem dolor sit amet, consectetur adipiscing elit</li>
+                <li>Lorem ipsum dolor sit amet, consectetur elit</li>
+                <li>Lorem ipsum dolor sit, consectetur adipiscing elit</li>
+                <li>Lorem dolor sit amet, consectetur adipiscing elit</li>
+                <li>Lorem ipsum dolor sit amet, consectetur elit</li>
+              </ul>
+            </div>
+
+            <!-- Section 3: Preparación -->
+            <div class="detail-section d-none d-md-block">
+              <h2 class="content-title">Itinerario</h2>
+              <p class="content-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor:
+                <br><br>
+                • Lorem dolor sit amet, consectetur adipiscing elit<br>
+                • Lorem ipsum dolor sit amet, consectetur elit<br>
+                • Lorem ipsum dolor sit, consectetur adipiscing elit
+              </p>
+            </div>
+
+            <!-- Section 4: Puntos de encuentro -->
+            <div class="detail-section d-none d-md-block">
+              <h2 class="content-title">Puntos de encuentro</h2>
+              <p class="content-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor:
+                <br><br>
+                • Lorem dolor sit amet, consectetur adipiscing elit<br>
+                • Lorem ipsum dolor sit amet, consectetur elit<br>
+                • Lorem ipsum dolor sit, consectetur adipiscing elit
+              </p>
+            </div>
+
+            <!-- Section 5: Políticas -->
+            <div class="detail-section d-none d-md-block">
+              <h2 class="content-title">Políticas</h2>
+              <p class="content-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </p>
+              <!-- Links at the end -->
+              <div class="links-row mt-3">
+                <a href="#" class="item-link">Link 1</a>
+                <span class="mx-2">•</span>
+                <a href="#" class="item-link">Link 2</a>
+                <span class="mx-2">•</span>
+                <a href="#" class="item-link">Link 3</a>
+              </div>
+            </div>
+            <!-- Mobile Accordion (Only shown on mobile) -->
+            <div class="mobile-faq d-block d-md-none">
+              <div class="faq-item border-bottom">
+                <button class="faq-toggle w-100 d-flex justify-content-between align-items-center py-3 "
+                  data-bs-toggle="collapse" data-bs-target="#descSection">
+                  <span class="faq-title">Descripción</span>
+                  <img src="assets/icons/arrowRight.svg" class="arrow-icon" alt="Arrow">
+                </button>
+                <div id="descSection" class="collapse faq-content px-3 pb-3">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                </div>
+              </div>
+
+              <div class="faq-item border-bottom">
+                <button class="faq-toggle w-100 d-flex justify-content-between align-items-center py-3 "
+                  data-bs-toggle="collapse" data-bs-target="#incluyeSection">
+                  <span class="faq-title">Incluye</span>
+                  <img src="assets/icons/arrowRight.svg" class="arrow-icon" alt="Arrow">
+                </button>
+                <div id="incluyeSection" class="collapse faq-content px-3 pb-3">
+                  <ul class="mb-0">
+                    <li>Lorem ipsum dolor sit, consectetur adipiscing elit</li>
+                    <li>Lorem dolor sit amet, consectetur adipiscing elit</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="faq-item border-bottom">
+                <button class="faq-toggle w-100 d-flex justify-content-between align-items-center py-3 "
+                  data-bs-toggle="collapse" data-bs-target="#itinSection">
+                  <span class="faq-title">Itinerario</span>
+                  <img src="assets/icons/arrowRight.svg" class="arrow-icon" alt="Arrow">
+                </button>
+                <div id="itinSection" class="collapse faq-content px-3 pb-3">
+                  • Lorem dolor sit amet, consectetur adipiscing elit<br>
+                  • Lorem ipsum dolor sit amet, consectetur elit
+                </div>
+              </div>
+
+              <div class="faq-item border-bottom">
+                <button class="faq-toggle w-100 d-flex justify-content-between align-items-center py-3 "
+                  data-bs-toggle="collapse" data-bs-target="#prepSection">
+                  <span class="faq-title">Preparación</span>
+                  <img src="assets/icons/arrowRight.svg" class="arrow-icon" alt="Arrow">
+                </button>
+                <div id="prepSection" class="collapse faq-content px-3 pb-3">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </div>
+
+              <div class="faq-item border-bottom">
+                <button class="faq-toggle w-100 d-flex justify-content-between align-items-center py-3"
+                  data-bs-toggle="collapse" data-bs-target="#puntoSection">
+                  <span class="faq-title">Punto de Encuentro</span>
+                  <img src="assets/icons/arrowRight.svg" class="arrow-icon" alt="Arrow">
+                </button>
+                <div id="puntoSection" class="collapse faq-content px-3 pb-3">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </div>
+
+              <div class="faq-item border-bottom">
+                <button class="faq-toggle w-100 d-flex justify-content-between align-items-center py-3"
+                  data-bs-toggle="collapse" data-bs-target="#politicaSection">
+                  <span class="faq-title">Políticas</span>
+                  <img src="assets/icons/arrowRight.svg" class="arrow-icon" alt="Arrow">
+                </button>
+                <div id="politicaSection" class="collapse faq-content px-3 pb-3">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="container my-5">
+            <!-- Top row: Big rating on left, star breakdown on right -->
+            <div class="row align-items-start">
+              <!-- Left: big rating + total reviews -->
+              <div class="col-auto me-5">
+                <div class="rating-big">4.5</div>
+                <div class="d-flex align-items-center mt-2">
+                  <img src="assets/icons/starIcon.svg" alt="Stars Icon" width="88" height="22" class="me-2" />
+                </div>
+                <div class="total-reviews">120 Reseñas</div>
+              </div>
+
+              <!-- Right: star breakdown (5 Estrellas, 4 Estrellas, etc.) -->
+              <div class="col-auto">
+                <div class="star-breakdown d-flex flex-column gap-2">
+                  <!-- Example breakdown item -->
+                  <div class="d-flex align-items-center">
+                    <span class="star-count">5 Estrellas</span>
+                    <img src="assets/images/line1.jpg" alt="Line Icon" class="ms-2 line-icon" />
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <span class="star-count">4 Estrellas</span>
+                    <img src="assets/images/line2.png" alt="Line Icon" class="ms-2 line-icon" />
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <span class="star-count">3 Estrellas</span>
+                    <img src="assets/images/line3.png" alt="Line Icon" class="ms-2 line-icon" />
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <span class="star-count">2 Estrellas</span>
+                    <img src="assets/images/line4.png" alt="Line Icon" class="ms-2 line-icon" />
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <span class="star-count">1 Estrella</span>
+                    <img src="assets/images/line5.png" alt="Line Icon" class="ms-2 line-icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reseñas heading -->
+            <div class="mt-4">
+              <h6 class="reseñas-title">RESEÑAS</h6>
+            </div>
+
+            <!-- Review 1 -->
+            <div class="review-item mt-3">
+              <div class="d-flex align-items-center">
+                <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" class="me-2" />
+                <span class="review-title">Title, Lorem ipsum dolor sit amet...</span>
+              </div>
+              <p class="review-description mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </p>
+              <div class="review-author mt-1">Erika, Mar 2022</div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-item mt-3">
+              <div class="d-flex align-items-center">
+                <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" class="me-2" />
+                <span class="review-title">Title, Lorem ipsum dolor sit amet...</span>
+              </div>
+              <p class="review-description mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </p>
+              <div class="review-author mt-1">Erika, Mar 2022</div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-item mt-3">
+              <div class="d-flex align-items-center">
+                <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" class="me-2" />
+                <span class="review-title">Title, Lorem ipsum dolor sit amet...</span>
+              </div>
+              <p class="review-description mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </p>
+              <div class="review-author mt-1">Erika, Mar 2022</div>
+            </div>
+
+            <!-- View all reviews link -->
+            <div class="mt-3">
+              <a href="#" class="reviews-link">Ver todas las reseñas</a>
+            </div>
+
+            <!-- Product info -->
+            <div class="product-info mt-5">
+              <p>
+                ID de Producto XXXX<br />
+                Proveedor: Nombre del proveedor<br />
+                Ubicación, Ciudad
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column (Card) -->
+        <!-- Right Column (Card) -->
+        <div class="col-md-6 d-flex justify-content-end d-none d-md-flex">
+          <!-- Single .info-card container -->
+          <div class="info-card" id="infoCard">
+            <!-- Price & Dropdowns -->
+            <div class="price-text mb-4">
+              $50 <span class="small-text">por persona</span>
+            </div>
+
+            <div class="select-title mb-2">Selecciona fecha y participantes</div>
+
+            <!-- Dropdown #1 -->
+            <div class="mb-2">
+              <div class="dropdown-field d-flex align-items-center">
+                <img src="assets/icons/calenderIcon.svg" alt="Calendar Icon" class="me-2" width="16" height="16" />
+                <span class="dropdown-text">Octubre 4, 2024</span>
+              </div>
+            </div>
+
+            <!-- Dropdown #2 -->
+            <div>
+              <div class="dropdown-field d-flex align-items-center">
+                <img src="assets/icons/person.svg" alt="Users Icon" class="me-2" width="16" height="16" />
+                <span class="dropdown-text">2 Adultos</span>
+              </div>
+            </div>
+
+            <!-- "Ver disponibilidad" button -->
+            <button class="btn-availability" id="showSubItemBtn">
+              Ver disponibilidad
+            </button>
+
+            <!-- Hidden sub-item differential section (initially display:none) -->
+            <div class="sub-item-diff" id="subItemDiff">
+              <!-- Title + circle radio on the right -->
+              <div class="d-flex align-items-center mb-1">
+                <h5 class="sub-item-title mb-0">
+                  Nombre de sub item diferencial
+                </h5>
+                <div class="circle-radio ms-auto" id="circleRadio"></div>
+              </div>
+              <div class="sub-item-desc">Metadata necesaria</div>
+
+              <!-- Paragraph -->
+              <p class="sub-item-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor,
+                consectetur adipiscing elit, sed do eiusmod tempor.
+              </p>
+
+              <!-- Time labels container (horizontal scroll) -->
+              <div class="time-labels-container">
+                <div class="time-label">10:45 AM</div>
+                <div class="time-label">1:45 PM</div>
+                <div class="time-label">4:30 PM</div>
+                <div class="time-label">8:00 PM</div>
+              </div>
+
+              <!-- Total line -->
+              <div class="sub-item-total">Total $150</div>
+              <p class="sub-item-subtext">2 Adultos x $75</p>
+            </div>
+
+            <!-- Final "Agendar ahora" button (initially display:none) -->
+            <button class="btn-schedule" id="scheduleBtn">
+              Agendar ahora
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- recomendos  -->
+    <div class="container my-2 my-sm-5">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="d-flex align-items-center gap-2">
+
+            <h2 class="tendencias-title mb-0 mb-sm-3">Te puede gustar...</h2>
+            <img src="assets/icons/arrow-forward.svg" alt="Arrow" class="d-inline-block d-md-none"
+              style="width: 24px; height: 24px; opacity: 0.5;" />
+          </div>
+
+
+          <p class="tendencias-desc d-none d-md-block mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-2 my-sm-5">
+      <div class="row flex-nowrap flex-sm-wrap gx-2 g-sm-4 overflow-auto">
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-md-6 col-xl-3 d-flex justify-content-center my-margin-top-40">
+          <div class="tour-card">
+            <img src="assets/images/tourImage.png" alt="Tour Image" class="card-img-top" />
+            <div class="card-body">
+              <div class="special-label">Special Label</div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+                </div>
+              </div>
+              <div class="tour-title mt-1">Tour name, special city</div>
+              <div class="tour-category mt-1">Category • 1.2 miles away</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/icons/starIcon.svg" alt="Star Icon" width="88" height="18" />
+                  <span class="rating-score">4.5</span>
+                </div>
+              </div>
+              <div class="tour-price">From $50</div>
+              <div class="tour-desc mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tendency section -->
+    <div class="container my-4 my-sm-5">
+      <div class="row align-items-center justify-content-between">
+
+        <!-- LEFT SIDE -->
+        <div class="col">
+          <div class="d-flex align-items-center gap-2">
+            <!-- Title -->
+            <h2 class="tendencias-title mb-0 mb-sm-3">Tendencias Top</h2>
+            <!-- Mobile arrow only -->
+            <img src="assets/icons/arrow-forward.svg" alt="Arrow" class="d-inline-block d-md-none"
+              style="width: 24px; height: 24px; opacity: 0.5;" />
+          </div>
+
+          <!-- Description (hide on mobile) -->
+          <p class="tendencias-desc d-none d-md-block mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+        </div>
+        <!-- RIGHT SIDE: Button (hide on mobile) -->
+        <div class="col-auto d-none d-md-block">
+          <button class="btn-ver-mas">
+            Ver más tendencias
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 8 images section-->
+    <div class="container  ticker-section" style="margin-bottom: 280px;">
+      <div class="item-city-list  d-flex align-items-center flex-wrap flex-xl-nowrap overflow-visible overflow-sm-auto">
+
+        <!-- 1. Ciudad X -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Ciudad X" class="city-img">
+          <div class="city-label">Ciudad X</div>
+        </div>
+
+        <!-- 2. Lugar X -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Lugar X" class="city-img">
+          <div class="city-label">Lugar X</div>
+        </div>
+
+        <!-- 3. Barcelona Z -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Barcelona Z" class="city-img">
+          <div class="city-label">Barcelona Z</div>
+        </div>
+
+        <!-- 4. España W -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="España W" class="city-img">
+          <div class="city-label">España W</div>
+        </div>
+
+        <!-- 5. Lugar Y -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Lugar Y" class="city-img">
+          <div class="city-label">Lugar Y</div>
+        </div>
+
+        <!-- 6. Barcelona Z -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Barcelona Z" class="city-img">
+          <div class="city-label">Barcelona Z</div>
+        </div>
+
+        <!-- 7. Ciudad X -->
+        <div class="city-item text-center flex-shrink-0">
+          <img src="assets/images/tendency-pic.png" alt="Ciudad X" class="city-img">
+          <div class="city-label">Ciudad X</div>
+        </div>
+
+        <!-- 8. España W + Arrow -->
+        <div class="city-item text-center flex-shrink-0 position-relative">
+          <img src="assets/images/tendency-pic.png" alt="España W" class="city-img">
+          <div class="city-label">España W</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <footer class="footer-section position-relative">
+    <!-- newsaltter section -->
+    <div class="container my-5 d-flex justify-content-center inner-container above-the-footer">
+      <div class="container d-flex justify-content-center my-margin-62">
+        <!-- Orange banner -->
+        <div class="orange-section d-flex align-items-center flex-column flex-md-row">
+
+          <!-- Left image -->
+          <img src="assets/images/globalMap.png" alt="Global Map" class="map-image" />
+
+          <!-- Text and button -->
+          <div class="ms-custom ms-md-custom">
+            <h2 class="banner-title">
+              Únete a la comunidad viajera más grande del mundo.
+            </h2>
+            <p class="banner-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc, hendrerit euismod quam enim. Sagittis
+              tortor, sed. Convallis nunc tellus.
+            </p>
+            <button class="btn-register">
+              Regístrate y Descubre
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid px-0">
+      <div class="footer-container mx-auto">
+        <div class="row g-0">
+
+          <!-- 1) Left Column: Logos + Social Icons -->
+          <!-- Column for Logos + Social Icons -->
+          <div class="col-auto d-flex flex-column justify-content-start align-items-center">
+            <!-- Flight Logo (top) -->
+            <img src="assets/images/tFlight.png" alt="Flight Logo" class="flightfooter-logo mb-2" />
+
+            <!-- Tour Logo (bottom) -->
+            <img src="assets/images/tourLogoFooter.png" alt="Tour Logo" class="footer-logo" />
+
+            <!-- Social Icons (24px margin-top from logos) -->
+            <div class="d-flex align-items-center mt-3" style="gap: 12px;">
+              <img src="assets/icons/fb.svg" alt="Facebook" class="social-icon" />
+              <img src="assets/icons/insta.svg" alt="Instagram" class="social-icon" />
+              <img src="assets/icons/x.svg" alt="X (Twitter)" class="social-icon" />
+              <img src="assets/icons/youtube.svg" alt="YouTube" class="social-icon" />
+            </div>
+          </div>
+
+
+          <!-- Spacer to match the 140px margin from the left col to the next col -->
+          <div class="col-auto" style="width:140px;"></div>
+
+          <!-- 2) Nuestros Destinos -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Nuestros Destinos</div>
+            <ul class="footer-col-list">
+              <li>Canadá</li>
+              <li>Alaska</li>
+              <li>France</li>
+              <li>Iceland</li>
+            </ul>
+          </div>
+
+          <!-- 3) Actividades Top -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Actividades Top</div>
+            <ul class="footer-col-list">
+              <li>Auroras boreales</li>
+              <li>Crucero y Navegación</li>
+              <li>Multi-actividades</li>
+              <li>Kayak</li>
+            </ul>
+          </div>
+
+          <!-- 4) Viajes y Hoteles -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Viajes y Hoteles</div>
+            <ul class="footer-col-list">
+              <li>Bali Guía de Viaje</li>
+              <li>Sri Lanka Guía de Viaje</li>
+              <li>Perú Guía de Viaje</li>
+              <li>Bali Guía de Viaje</li>
+            </ul>
+          </div>
+
+          <!-- 5) Sobre Nosotros -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Sobre Nosotros</div>
+            <ul class="footer-col-list">
+              <li>Nuestra Historia</li>
+              <li>Somos TourMate</li>
+            </ul>
+            <!-- Google Play image -->
+            <img src="assets/images/google.png" alt="Get it on Google Play" class="store-badge mt-2" />
+          </div>
+
+          <!-- 6) Contáctanos -->
+          <div class="col-auto footer-col">
+            <div class="footer-col-title">Contáctanos</div>
+            <ul class="footer-col-list">
+              <li>hello@tourmate.com</li>
+              <li>Dirección X</li>
+            </ul>
+            <!-- Apple Store image -->
+            <img src="assets/images/apple.png" alt="Download on the App Store" class="store-badge mt-2" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const infoCard = document.getElementById('infoCard');
+    const showSubItemBtn = document.getElementById('showSubItemBtn');
+    const subItemDiff = document.getElementById('subItemDiff');
+    const scheduleBtn = document.getElementById('scheduleBtn');
+    const circleRadio = document.getElementById('circleRadio');
+
+    showSubItemBtn.addEventListener('click', () => {
+      infoCard.classList.add('expanded');       // Expand the card (e.g., from 284px to 700px)
+      subItemDiff.style.display = 'block';        // Show the sub-item section
+      scheduleBtn.style.display = 'block';        // Show the "Agendar ahora" button
+      showSubItemBtn.style.display = 'none';        // Hide the "Ver disponibilidad" button
+    });
+
+    circleRadio.addEventListener('click', () => {
+      circleRadio.classList.toggle('active');     // Toggle the circle fill
+    });
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

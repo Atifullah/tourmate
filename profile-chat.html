@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chat-profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/feed.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <nav class="navbar mt-4 d-none d-lg-flex">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/icons/tourMateLogo.svg" alt="Tourmate Logo" height="40" />
+                </a>
+
+                <div class="d-flex align-items-center gap-3">
+                    <span class="nav-text me-4">Conviértete en Proveedor</span>
+                    <img src="assets/icons/userIcon.svg" alt="Users Icon" height="40" width="40" />
+                    <div class="d-flex ">
+                        <img src="assets/icons/feed.svg" alt="feedback" height="40" width="40" />
+                        <img src="assets/icons/notification.svg" alt="notification" height="40" width="40" />
+                    </div>
+                    <div class="d-flex">
+                        <img src="assets/icons/worldIcon.svg" alt="World Icon" height="40" width="40" />
+                        <img src="assets/icons/iIcon.svg" alt="Info Icon" height="40" width="40" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-3 d-none d-lg-flex">
+            <div class="welcome-banner text-white d-flex flex-column justify-content-center">
+                <div class="d-flex align-items-center mb-2">
+                    <img src="assets/icons/backIcon.svg" alt="Info Icon" height="24" width="24" />
+
+                    <h6 class="mb-0 font-14">Volver</h6>
+                </div>
+                <h1 class="welcome-title mb-2">
+                    Comunidad TourMate ✈️
+                </h1>
+                <p class="welcome-subtitle mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+
+        </div>
+        <div class="d-block d-lg-none bg-primary px-3 py-2 w-100">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Title -->
+                <span class="comunidad-title text-white">Comunidad TourMate</span>
+
+                <!-- Icons -->
+                <div class="d-flex gap-3 align-items-center">
+                    <img src="assets/icons/personWhite.svg" alt="Person Icon" width="24" height="24" />
+
+                    <img src="assets/icons/commentWhite.svg" alt="Comment Icon" width="24" height="24"
+                        id="toggleSidebarBtn" style="cursor: pointer;" />
+                    <img src="assets/icons/editWhite.svg" alt="Edit Icon" width="24" height="24" />
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid  px-0 px-sm-5">
+            <div class="row">
+                <!-- Left Sidebar -->
+                <div class="col-12 col-lg-4 mb-4 mb-lg-0" id="leftSection">
+                    <div class="left-sidebar mb-5">
+
+                        <!-- Amigos Heading -->
+                        <div class="mb-3 d-flex align-items-center justify-content-between">
+                            <div class="friends-title me-3">Chat</div>
+                            <div class="friends-count">14 chats</div>
+                        </div>
+
+
+                        <!-- Search Input -->
+                        <div class="mb-5">
+                            <div class="input-group search-box">
+                                <span class="input-group-text bg-transparent border-0">
+                                    <img src="assets/icons/search.svg" alt="Search" width="20" height="20">
+                                </span>
+                                <input type="text" class="form-control search-input" placeholder="Encuentra amigos">
+                            </div>
+                        </div>
+
+
+                        <!-- User Profiles List -->
+                        <div class="friends-list">
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Julia Smith</div>
+                                    <div class="request-handle">@juliasmith</div>
+                                </div>
+                                <img src="assets/icons/options.svg" class="me-2" alt="Add">
+                            </div>
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Vermillion D. Gray</div>
+                                    <div class="request-handle">@vermilliongray</div>
+                                </div>
+                                <img src="assets/icons/options.svg" class="me-2" alt="Add">
+                            </div>
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Mai Senpai</div>
+                                    <div class="request-handle">@maisenpai</div>
+                                </div>
+                                <img src="assets/icons/options.svg" class="me-2" alt="Add">
+                            </div>
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Saylor D. Twift</div>
+                                    <div class="request-handle">@sailortwift</div>
+                                </div>
+                                <img src="assets/icons/options.svg" class="me-2" alt="Add">
+                            </div>
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Azunyan U. Wu</div>
+                                    <div class="request-handle">@azunyandesu</div>
+                                </div>
+                                <img src="assets/icons/options.svg" class="me-2" alt="Add">
+                            </div>
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Azunyan U. Wu</div>
+                                    <div class="request-handle">@azunyandesu</div>
+                                </div>
+                                <img src="assets/icons/options.svg" class="me-2" alt="Add">
+                            </div>
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Azunyan U. Wu</div>
+                                    <div class="request-handle">@azunyandesu</div>
+                                </div>
+                                <img src="assets/icons/options.svg" class="me-2" alt="Add">
+                            </div>
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Azunyan U. Wu</div>
+                                    <div class="request-handle">@azunyandesu</div>
+                                </div>
+                                <img src="assets/icons/options.svg" class="me-2" alt="Add">
+                            </div>
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Azunyan U. Wu</div>
+                                    <div class="request-handle">@azunyandesu</div>
+                                </div>
+                                <img src="assets/icons/options.svg" class="me-2" alt="Add">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="col-12 col-lg-4 d-none d-lg-block" id="rightSidebar">
+                    <div class="right-section mb-5">
+                        <div class="chat-section border rounded mb-4">
+                            <!-- Chat Header -->
+                            <div
+                                class="chat-header d-flex align-items-center justify-content-between px-3 py-2 border-bottom">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="assets/images/profileImage.png" class="rounded-circle" width="41"
+                                        height="41" alt="User">
+                                    <strong>Carla Morrison, Hotel X</strong>
+                                </div>
+                                <img src="assets/icons/options.svg" alt="Options" width="24" height="24">
+                            </div>
+
+                            <!-- Chat Messages -->
+                            <div class="chat-body p-3">
+                                <!-- Message Left -->
+                                <div class="d-flex align-items-start mb-2 gap-2">
+                                    <img src="assets/images/profileImage.png" class="rounded-circle" width="41"
+                                        height="41" alt="User">
+                                    <div class="chat-bubble-left">So excited!</div>
+                                </div>
+
+                                <!-- Timestamp -->
+                                <div class="text-center text-muted small my-3">Yesterday</div>
+
+                                <!-- More Messages Left -->
+                                <div class="d-flex align-items-start mb-2 gap-2">
+                                    <img src="assets/images/profileImage.png" class="rounded-circle" width="41"
+                                        height="41" alt="User">
+                                    <div class="chat-bubble-left">What should we make?</div>
+                                </div>
+                                <div class="d-flex align-items-start mb-2 gap-2">
+                                    <img src="assets/images/profileImage.png" class="rounded-circle" width="41"
+                                        height="41" alt="User">
+                                    <div class="chat-bubble-left">Pasta?</div>
+                                </div>
+
+                                <!-- Message Right -->
+                                <div class="d-flex align-items-start justify-content-end mb-2 gap-2">
+                                    <div>
+                                        <div class="chat-bubble-right">or we could make this?</div>
+                                        <!-- Image Bubble -->
+                                        <div class="chat-image-box mt-2">
+                                            <img src="assets/images/signupImage.png" class="w-100 h-100 mb-2 rounded"
+                                                alt="Food" />
+                                            <div class="text-black">Homemade Dumplings</div>
+                                            <a href="#" class="text-primary small">everydumplingever.com</a>
+                                        </div>
+                                    </div>
+                                    <img src="assets/images/profileImage.png" class="rounded-circle" width="41"
+                                        height="41" alt="User">
+                                </div>
+
+                                <!-- Final Message Left -->
+                                <div class="d-flex align-items-start mb-2 gap-2">
+                                    <img src="assets/images/profileImage.png" class="rounded-circle" width="41"
+                                        height="41" alt="User">
+                                    <div class="chat-bubble-left">Sounds good!</div>
+                                </div>
+                            </div>
+
+                            <!-- Quick Tags -->
+                            <div class="d-flex flex-wrap gap-2 px-3 pb-2 ms-auto" style="max-width: fit-content;">
+                                <div class="chat-tag">Let's do it</div>
+                                <div class="chat-tag">Great!</div>
+                                <div class="chat-tag">Great!</div>
+                            </div>
+
+
+                            <!-- Message Input -->
+                            <div class="chat-footer d-flex align-items-center px-3 py-3 border-top bg-light gap-3">
+                                <img src="assets/icons/plusIcon.svg" width="24" height="24" alt="Plus">
+                                <img src="assets/icons/smileIcon.svg" width="24" height="24" alt="Smile">
+                                <div class="flex-grow-1 position-relative">
+                                    <input type="text" class="form-control" />
+                                    <img src="assets/icons/tt.svg" class="input-tt" alt="TT Icon" />
+                                    <img src="assets/icons/mick.svg" class="input-mick" alt="Mic Icon" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleBtn = document.getElementById("toggleSidebarBtn");
+            const leftSection = document.getElementById("leftSection");
+            const rightSidebar = document.getElementById("rightSidebar");
+
+            toggleBtn.addEventListener("click", function () {
+                // Only run this on mobile/tablet (< 992px)
+                if (window.innerWidth < 992) {
+                    leftSection.style.display = "none";
+                    rightSidebar.classList.remove("d-none");
+                    rightSidebar.classList.add("d-block");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

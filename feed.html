@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/feed.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <nav class="navbar mt-4 d-none d-lg-flex">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/icons/tourMateLogo.svg" alt="Tourmate Logo" height="40" />
+                </a>
+
+                <div class="d-flex align-items-center gap-3">
+                    <span class="nav-text me-4">Conviértete en Proveedor</span>
+                    <img src="assets/icons/userIcon.svg" alt="Users Icon" height="40" width="40" />
+                    <div class="d-flex ">
+                        <img src="assets/icons/feed.svg" alt="feedback" height="40" width="40" />
+                        <img src="assets/icons/notification.svg" alt="notification" height="40" width="40" />
+                    </div>
+                    <div class="d-flex">
+                        <img src="assets/icons/worldIcon.svg" alt="World Icon" height="40" width="40" />
+                        <img src="assets/icons/iIcon.svg" alt="Info Icon" height="40" width="40" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-3 d-none d-lg-flex">
+            <div class="welcome-banner text-white d-flex flex-column justify-content-center">
+                <h1 class="welcome-title mb-2">
+                    Bienvenido Karol 👋🏻
+                </h1>
+                <p class="welcome-subtitle mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <div class="d-block d-lg-none bg-primary px-3 py-2 w-100">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Title -->
+                <span class="comunidad-title text-white">Comunidad TourMate</span>
+
+                <!-- Icons -->
+                <div class="d-flex gap-3 align-items-center">
+                    <img src="assets/icons/personWhite.svg" alt="Person Icon" width="24" height="24"
+                        id="toggleSidebarBtn" style="cursor: pointer;" />
+
+                    <img src="assets/icons/commentWhite.svg" alt="Comment Icon" width="24" height="24" />
+                    <img src="assets/icons/editWhite.svg" alt="Edit Icon" width="24" height="24" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid px-0 px-sm-5 ">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-lg-8" id="leftSection">
+                    <div class="post-editor card">
+                        <div class="d-flex align-items-start gap-2">
+                            <img src="assets/images/profileImage.png" class="profile-pic-sm" alt="Profile">
+                            <textarea class="form-control post-textarea"
+                                placeholder="¿En qué está pensando ahora?"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-end align-items-center gap-2 mt-3">
+                            <button class="icon-btn">
+                                <img src="assets/icons/locationIcon.svg" alt="Location">
+                            </button>
+                            <button class="icon-btn">
+                                <img src="assets/icons/galleryIcon.svg" alt="Gallery">
+                            </button>
+                            <button class="icon-btn">
+                                <img src="assets/icons/smileIcon.svg" alt="Emoji">
+                            </button>
+                            <button class="btn btn-primary post-btn">
+                                Post <img src="assets/icons/send.svg" width="20" class="ms-1">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Post Feed -->
+                    <div class="post card ">
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="assets/images/profileImage.png" class="profile-pic-sm" alt="Profile">
+                            <div>
+                                <div class="fw-bold username">X_AE_A-13</div>
+                                <div class="text-muted small">Product Designer, slothUI</div>
+                            </div>
+                        </div>
+                        <p class="post-text mt-2">
+                            Habitant morbi tristique senectus et netus et. Suspendisse sed nisi lacus sed viverra. Dolor
+                            morbi non arcu risus quis varius.
+                            <span class="hashtags">#amazing #great #lifetime #uiux #machinelearning</span>
+                        </p>
+                        <img src="assets/images/postImage.png" class="post-img mt-3" alt="Post Image">
+                        <div class="d-flex align-items-center justify-content-between mt-3">
+                            <div class="d-flex align-items-center gap-4">
+
+                                <!-- Likes -->
+                                <span>
+                                    <img src="assets/icons/like.svg" alt="Like" />
+                                    <!-- Show number only on sm -->
+                                    <span class="d-inline d-md-none">12</span>
+                                    <!-- Show full text on md+ -->
+                                    <span class="d-none d-md-inline">12 Me gusta</span>
+                                </span>
+
+                                <!-- Comments -->
+                                <span>
+                                    <img src="assets/icons/comment.svg" alt="Comment" />
+                                    <span class="d-inline d-md-none">25</span>
+                                    <span class="d-none d-md-inline">25 Comentarios</span>
+                                </span>
+
+                                <!-- Shares -->
+                                <span>
+                                    <img src="assets/icons/share.svg" alt="Share" />
+                                    <span class="d-inline d-md-none">187</span>
+                                    <span class="d-none d-md-inline">187 Compartidos</span>
+                                </span>
+
+                            </div>
+
+                            <img src="assets/icons/save.svg" alt="Save">
+                        </div>
+                    </div>
+                    <div class="post card ">
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="assets/images/profileImage.png" class="profile-pic-sm" alt="Profile">
+                            <div>
+                                <div class="fw-bold username">X_AE_A-13</div>
+                                <div class="text-muted small">Product Designer, slothUI</div>
+                            </div>
+                        </div>
+                        <p class="post-text mt-2">
+                            Habitant morbi tristique senectus et netus et. Suspendisse sed nisi lacus sed viverra. Dolor
+                            morbi non arcu risus quis varius.
+                            <span class="hashtags">#amazing #great #lifetime #uiux #machinelearning</span>
+                        </p>
+                        <div class="d-flex align-items-center justify-content-between mt-3">
+                            <div class="d-flex align-items-center gap-4">
+
+                                <!-- Likes -->
+                                <span>
+                                    <img src="assets/icons/like.svg" alt="Like" />
+                                    <!-- Show number only on sm -->
+                                    <span class="d-inline d-md-none">12</span>
+                                    <!-- Show full text on md+ -->
+                                    <span class="d-none d-md-inline">12 Me gusta</span>
+                                </span>
+
+                                <!-- Comments -->
+                                <span>
+                                    <img src="assets/icons/comment.svg" alt="Comment" />
+                                    <span class="d-inline d-md-none">25</span>
+                                    <span class="d-none d-md-inline">25 Comentarios</span>
+                                </span>
+
+                                <!-- Shares -->
+                                <span>
+                                    <img src="assets/icons/share.svg" alt="Share" />
+                                    <span class="d-inline d-md-none">187</span>
+                                    <span class="d-none d-md-inline">187 Compartidos</span>
+                                </span>
+
+                            </div>
+
+                            <img src="assets/icons/save.svg" alt="Save">
+                        </div>
+                    </div>
+                    <div class="post card ">
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="assets/images/profileImage.png" class="profile-pic-sm" alt="Profile">
+                            <div>
+                                <div class="fw-bold username">X_AE_A-13</div>
+                                <div class="text-muted small">Product Designer, slothUI</div>
+                            </div>
+                        </div>
+                        <p class="post-text mt-2">
+                            Habitant morbi tristique senectus et netus et. Suspendisse sed nisi lacus sed viverra. Dolor
+                            morbi non arcu risus quis varius.
+                            <span class="hashtags">#amazing #great #lifetime #uiux #machinelearning</span>
+                        </p>
+                        <img src="assets/images/postImage.png" class="post-img mt-3" alt="Post Image">
+                        <div class="d-flex align-items-center justify-content-between mt-3">
+                            <div class="d-flex align-items-center gap-4">
+
+                                <!-- Likes -->
+                                <span>
+                                    <img src="assets/icons/like.svg" alt="Like" />
+                                    <!-- Show number only on sm -->
+                                    <span class="d-inline d-md-none">12</span>
+                                    <!-- Show full text on md+ -->
+                                    <span class="d-none d-md-inline">12 Me gusta</span>
+                                </span>
+
+                                <!-- Comments -->
+                                <span>
+                                    <img src="assets/icons/comment.svg" alt="Comment" />
+                                    <span class="d-inline d-md-none">25</span>
+                                    <span class="d-none d-md-inline">25 Comentarios</span>
+                                </span>
+
+                                <!-- Shares -->
+                                <span>
+                                    <img src="assets/icons/share.svg" alt="Share" />
+                                    <span class="d-inline d-md-none">187</span>
+                                    <span class="d-none d-md-inline">187 Compartidos</span>
+                                </span>
+
+                            </div>
+
+                            <img src="assets/icons/save.svg" alt="Save">
+                        </div>
+                    </div>
+                    <div class="post card ">
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="assets/images/profileImage.png" class="profile-pic-sm" alt="Profile">
+                            <div>
+                                <div class="fw-bold username">X_AE_A-13</div>
+                                <div class="text-muted small">Product Designer, slothUI</div>
+                            </div>
+                        </div>
+                        <p class="post-text mt-2">
+                            Habitant morbi tristique senectus et netus et. Suspendisse sed nisi lacus sed viverra. Dolor
+                            morbi non arcu risus quis varius.
+                            <span class="hashtags">#amazing #great #lifetime #uiux #machinelearning</span>
+                        </p>
+                        <div class="d-flex align-items-center justify-content-between mt-3">
+                            <div class="d-flex align-items-center gap-4">
+
+                                <!-- Likes -->
+                                <span>
+                                    <img src="assets/icons/like.svg" alt="Like" />
+                                    <!-- Show number only on sm -->
+                                    <span class="d-inline d-md-none">12</span>
+                                    <!-- Show full text on md+ -->
+                                    <span class="d-none d-md-inline">12 Me gusta</span>
+                                </span>
+
+                                <!-- Comments -->
+                                <span>
+                                    <img src="assets/icons/comment.svg" alt="Comment" />
+                                    <span class="d-inline d-md-none">25</span>
+                                    <span class="d-none d-md-inline">25 Comentarios</span>
+                                </span>
+
+                                <!-- Shares -->
+                                <span>
+                                    <img src="assets/icons/share.svg" alt="Share" />
+                                    <span class="d-inline d-md-none">187</span>
+                                    <span class="d-none d-md-inline">187 Compartidos</span>
+                                </span>
+
+                            </div>
+
+                            <img src="assets/icons/save.svg" alt="Save">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-4 d-none d-lg-flex" id="rightSidebar">
+                    <div class="right-sidebar mb-5">
+                        <div class="text-center position-relative">
+                            <img src="assets/images/profileImage.png" class="profile-pic-lg" alt="Profile">
+                            <span class="active-indicator d-none d-xl-block"></span>
+                            <div class="profile-name mt-3">Karol J. Saenz</div>
+                            <div class="profile-handle">@karols_21</div>
+                            <div class="d-flex align-items-center justify-content-center gap-1">
+                                <img src="assets/icons/englishFlag.svg" alt="Flag" width="20">
+                                <span class="profile-sub">Locación, Idioma</span>
+                            </div>
+                        </div>
+
+                        <div class="requests-section mt-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="requests-title">Solicitudes</div>
+                                <div class="requests-see-all">Ver todo <img src="assets/icons/linkArrow.svg"
+                                        alt="Arrow"></div>
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Julia Smith</div>
+                                    <div class="request-handle">@juliasmith</div>
+                                </div>
+                                <img src="assets/icons/add.svg" class="me-2" alt="Add">
+                                <img src="assets/icons/delete.svg" alt="Delete">
+                            </div>
+
+                            <!-- Repeat same structure for other requests -->
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Vermillion D. Gray</div>
+                                    <div class="request-handle">@vermillionggray</div>
+                                </div>
+                                <img src="assets/icons/add.svg" class="me-2" alt="Add">
+                                <img src="assets/icons/delete.svg" alt="Delete">
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Mai Senpai</div>
+                                    <div class="request-handle">@maisenpai</div>
+                                </div>
+                                <img src="assets/icons/add.svg" class="me-2" alt="Add">
+                                <img src="assets/icons/delete.svg" alt="Delete">
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Azunyan U. Wu</div>
+                                    <div class="request-handle">@azunyandesu</div>
+                                </div>
+                                <img src="assets/icons/add.svg" class="me-2" alt="Add">
+                                <img src="assets/icons/delete.svg" alt="Delete">
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Oarack Babama</div>
+                                    <div class="request-handle">@obama21</div>
+                                </div>
+                                <img src="assets/icons/add.svg" class="me-2" alt="Add">
+                                <img src="assets/icons/delete.svg" alt="Delete">
+                            </div>
+
+                        </div>
+                        <div class="requests-section mt-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="requests-title">Sugerencias de Amistad</div>
+                                <div class="requests-see-all">Ver todo <img src="assets/icons/linkArrow.svg"
+                                        alt="Arrow"></div>
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Julia Smith</div>
+                                    <div class="request-handle">@juliasmith</div>
+                                </div>
+                                <img src="assets/icons/Plusadd.svg" class="me-2" alt="Add">
+                            </div>
+
+                            <!-- Repeat same structure for other requests -->
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Vermillion D. Gray</div>
+                                    <div class="request-handle">@vermillionggray</div>
+                                </div>
+                                <img src="assets/icons/Plusadd.svg" class="me-2" alt="Add">
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Mai Senpai</div>
+                                    <div class="request-handle">@maisenpai</div>
+                                </div>
+                                <img src="assets/icons/Plusadd.svg" class="me-2" alt="Add">
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Azunyan U. Wu</div>
+                                    <div class="request-handle">@azunyandesu</div>
+                                </div>
+                                <img src="assets/icons/Plusadd.svg" class="me-2" alt="Add">
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Oarack Babama</div>
+                                    <div class="request-handle">@obama21</div>
+                                </div>
+                                <img src="assets/icons/Plusadd.svg" class="me-2" alt="Add">
+                            </div>
+
+                        </div>
+                        <div class="requests-section mt-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="requests-title">Amigos</div>
+                                <div class="requests-see-all">Ver todo <img src="assets/icons/linkArrow.svg"
+                                        alt="Arrow"></div>
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Julia Smith</div>
+                                    <div class="request-handle">@juliasmith</div>
+                                </div>
+                                <img src="assets/icons/add.svg" class="me-2" alt="Add">
+                                <img src="assets/icons/delete.svg" alt="Delete">
+                            </div>
+
+                            <!-- Repeat same structure for other requests -->
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Vermillion D. Gray</div>
+                                    <div class="request-handle">@vermillionggray</div>
+                                </div>
+                                <img src="assets/icons/add.svg" class="me-2" alt="Add">
+                                <img src="assets/icons/delete.svg" alt="Delete">
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Mai Senpai</div>
+                                    <div class="request-handle">@maisenpai</div>
+                                </div>
+                                <img src="assets/icons/add.svg" class="me-2" alt="Add">
+                                <img src="assets/icons/delete.svg" alt="Delete">
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Azunyan U. Wu</div>
+                                    <div class="request-handle">@azunyandesu</div>
+                                </div>
+                                <img src="assets/icons/add.svg" class="me-2" alt="Add">
+                                <img src="assets/icons/delete.svg" alt="Delete">
+                            </div>
+
+                            <div class="request-item">
+                                <img src="assets/images/profileImage.png" class="profile-pic-md" alt="User">
+                                <div class="flex-grow-1">
+                                    <div class="request-name">Oarack Babama</div>
+                                    <div class="request-handle">@obama21</div>
+                                </div>
+                                <img src="assets/icons/add.svg" class="me-2" alt="Add">
+                                <img src="assets/icons/delete.svg" alt="Delete">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleBtn = document.getElementById("toggleSidebarBtn");
+            const leftSection = document.getElementById("leftSection");
+            const rightSidebar = document.getElementById("rightSidebar");
+
+            toggleBtn.addEventListener("click", function () {
+                // Only run this on mobile/tablet (< 992px)
+                if (window.innerWidth < 992) {
+                    leftSection.style.display = "none";
+                    rightSidebar.classList.remove("d-none");
+                    rightSidebar.classList.add("d-block");
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

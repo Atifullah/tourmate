@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>item detail page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/itemDetail.css" />
+  <link rel="stylesheet" href="styles/pay.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="d-flex align-items-center d-lg-none bg-primary-mobile w-100"
+    style="height: 64px; padding: 8px 4px; gap: 4px;">
+    <img src="assets/icons/arrow-back.svg" alt="Back" width="24" height="24">
+    <span class="ticket-label-mobile">Solicitar reserva</span>
+  </div>
+  <div class="pay-main-container">
+    <div>
+      <nav class="navbar navbar-expand-lg custom-navbar-item d-none d-lg-block">
+        <div class="container-fluid p-0">
+          <!-- Logo on the left -->
+          <a class="navbar-brand" href="#">
+            <img src="assets/icons/tourMateLogo.svg" alt="Tourmate Logo" height="40" />
+          </a>
+
+          <!-- Right side -->
+          <div class="d-flex align-items-center">
+            <!-- Text -->
+            <span class="nav-text me-4">Conviértete en Proveedor</span>
+            <!-- Icons -->
+            <div class="d-flex gap-3">
+              <img src="assets/icons/userIcon.svg" alt="Users Icon" height="40" width="40" />
+              <img src="assets/icons/worldIcon.svg" alt="World Icon" height="40" width="40" />
+              <img src="assets/icons/iIcon.svg" alt="Info Icon" height="40" width="40" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container my-5">
+      <!-- Two-column layout with 55px gap -->
+      <div class="row" style="column-gap: 55px;">
+
+        <!-- Left Column: Form Section -->
+        <div class="col ">
+          <!-- Title + Description -->
+          <h2 class="tendencias-title d-none d-lg-block">Solicitar reserva</h2>
+          <p class="tendencias-desc mt-3 p-2 d-none d-lg-block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor.
+
+          </p>
+
+          <!-- Form Fields (4 inputs) -->
+          <div class="mt-4">
+            <!-- First Name -->
+            <div class="mb-3">
+              <label class="input-label" for="firstName">First Name</label>
+              <input type="text" class="form-control custom-input" id="firstName" placeholder="Karol J." />
+            </div>
+
+            <!-- Last Name -->
+            <div class="mb-3">
+              <label class="input-label" for="lastName">Last Name</label>
+              <input type="text" class="form-control custom-input" id="lastName" placeholder="Saenz" />
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="input-label" for="emailAddress">Email</label>
+              <input type="email" class="form-control custom-input" id="emailAddress" placeholder="karol@email.com" />
+            </div>
+
+            <!-- Phone -->
+            <div class="mb-4 position-relative">
+              <label class="input-label" for="phoneNumber">Phone</label>
+              <input type="text" class="form-control custom-input phone-input" id="phoneNumber"
+                placeholder="+1(544)-584-5222" />
+              <!-- Country flag on the right side -->
+              <img src="assets/icons/englishFlag.svg" alt="Flag" width="32" height="24"
+                class="position-absolute phone-flag" />
+            </div>
+
+            <!-- Button -->
+            <button class="btn-primary-action">Reservar y Pagar</button>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="mt-4">
+            <h6 class="contact-title">Contáctanos</h6>
+            <div class="mt-2 d-flex align-items-center gap-2">
+              <img src="assets/icons/phone.svg" alt="Phone Icon" width="16" height="16" />
+              <span class="contact-text">+34 456-4312</span>
+            </div>
+            <div class="mt-2 d-flex align-items-center gap-2">
+              <img src="assets/icons/email.svg" alt="Email Icon" width="16" height="16" />
+              <span class="contact-text">hello@tourmate.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Card Section -->
+        <div class="col-auto mt-5">
+          <div class="reserve-card">
+            <!-- Top row: small image + special label + rating info -->
+            <div class="d-flex">
+              <!-- Tour Image -->
+              <div class="tour-img-wrapper me-3">
+                <img src="assets/images/tourImage.png" alt="Tour Image" class="tour-img" />
+              </div>
+              <!-- Ticket Info -->
+              <div class="flex-grow-1">
+                <div class="special-label">Special Label</div>
+                <h5 class="tour-title mt-2 mb-3">Ticket Name</h5>
+                <div class="location-row d-flex align-items-center gap-1 mt-1">
+                  <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                  <span class="location-text">City, Country</span>
+
+                </div>
+                <p class="location-text">
+                  Entre 5 millas • $$-$$$
+                </p>
+                <div class="stars-row d-flex align-items-center ">
+                  <img src="assets/icons/starIcon.svg" alt="Stars" width="80" height="16" />
+                  <span class="rating-number">45900</span>
+                </div>
+              </div>
+            </div>
+            <hr class="my-3" />
+
+            <!-- Person & Date Row -->
+            <div class="d-flex flex-column align-items-left gap-2 mt-3">
+              <div class="d-flex align-items-center gap-1">
+                <img src="assets/icons/person.svg" alt="Person Icon" width="16" height="16" />
+                <span class="dropdown-text">2 Adultos</span>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <img src="assets/icons/calenderIcon.svg" alt="Calendar Icon" width="16" height="16" />
+                <span class="dropdown-text">Octubre 4, 2024</span>
+              </div>
+            </div>
+            <hr class="my-3" />
+
+
+            <!-- Subtotal Row -->
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="price-label">Subtotal</span>
+              <span class="price-value">$50 por persona</span>
+            </div>
+            <!-- Impuestos Row -->
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <span class="price-label">Impuestos</span>
+              <span class="price-value">$12 commission</span>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-3" />
+
+            <!-- Total Row -->
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <span class="price-total-label">Precio total</span>
+              <span class="price-total-value">$100</span>
+            </div>
+          </div>
+
+          <!-- Additional Info Below Card -->
+          <div class="mt-5 additional-info gap-3">
+            <h6 class="add-info-title">Flexibilidad excepcional</h6>
+            <p class="add-info-desc mb-3">
+              Cancelación gratuita y precio mínimo garantizado
+            </p>
+            <h6 class="add-info-title">Asistencia global las 24 horas, los 7 días de la semana</h6>
+
+            <p class="add-info-desc mb-0">
+              Asistencia global las 24 horas, los 7 días de la semana
+              <br />
+              Nuestro galardonado equipo de atención al cliente está aquí para ayudarte
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer-minimal d-flex align-items-center">
+    <div class="container d-flex justify-content-center">
+      <span class="footer-text">
+        © 2024 – 2024 TourMate. Made with 🧡 in Spain  – 
+        <a href="#" class="footer-link">Privacy Policy</a>
+      </span>
+    </div>
+  </footer>
+</body>
+
+</html>

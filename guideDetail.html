@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guide detail page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/itemDetail.css" />
+    <link rel="stylesheet" href="styles/guide.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="item-main-container">
+        <div>
+            <nav class="navbar navbar-expand-lg custom-navbar-item d-none d-md-flex">
+                <div class="container-fluid p-0">
+                    <!-- Logo on the left -->
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/icons/tourMateLogo.svg" alt="Tourmate Logo" height="40" />
+                    </a>
+
+                    <!-- Right side -->
+                    <div class="d-flex align-items-center">
+                        <!-- Text -->
+                        <span class="nav-text me-4">Conviértete en Proveedor</span>
+                        <!-- Icons -->
+                        <div class="d-flex gap-3">
+                            <img src="assets/icons/userIcon.svg" alt="Users Icon" height="40" width="40" />
+                            <img src="assets/icons/worldIcon.svg" alt="World Icon" height="40" width="40" />
+                            <img src="assets/icons/iIcon.svg" alt="Info Icon" height="40" width="40" />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container my-5 d-none d-md-block">
+            <div class="row">
+                <div class="col">
+                    <h6 class="ticket-category">GUÍA VIRTUAL</h6>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h1 class="ticket-title mb-0">Un Hermoso Título del Tour</h1>
+                        <div class="d-flex align-items-center gap-2">
+                            <span></span>
+                            <img src="assets/icons/plusBlueIcon.png" alt="Heart Icon" />
+                            <span class="bookmark-text">Add To Cart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TICKET BANNER FOR MOBILE -->
+        <div class="d-flex align-items-center justify-content-between d-md-none w-100 bg-primary-mobile px-3"
+            style="height: 64px;">
+            <span class="ticket-label-mobile">Desbloquear video</span>
+            <img src="assets/icons/closeWhite.svg" alt="Close" width="32" height="32">
+        </div>
+        <div class="my-0 my-sm-5">
+            <div class="video-hero-section position-relative overflow-hidden rounded-0 ">
+                <!-- Background Image -->
+                <img src="assets/images/item-image1.png" alt="Background" class="img-fluid  w-100 video-bg-img" />
+                <div class="video-gradient-overlay position-absolute bottom-0 start-0 w-100 h-100 "></div>
+
+
+                <!-- Center Play Button -->
+                <div class="video-play-button position-absolute top-50 start-50 translate-middle">
+                    <img src="assets/icons/playIcon.svg" alt="Play Button" width="60" height="60" />
+                </div>
+
+                <!-- Bottom Left Text -->
+                <div class="video-text  position-absolute bottom-0 start-0 text-white fw-bold ">
+                    La Sagrada Familia
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container my-5">
+            <div class="row">
+                <!-- Left Column (text) -->
+                <div class="col-md-8">
+
+                    <!-- Location row: City, Country + distance + price range -->
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <img src="assets/icons/locationIcon.svg" alt="Location Icon" width="16" height="16" />
+                        <span class="location-text">
+                            City, Country • Fecha • 13 min
+                        </span>
+
+                    </div>
+
+                    <!-- Provider row: "Proveedor: Oficial de TourMate" -->
+                    <div class="provider-row mb-3">
+                        <span class="fw-medium">Proveedor: </span>
+                        <span class="provider-label me-5">Oficial de TourMate</span>
+                    </div>
+
+                    <!-- Some paragraphs or placeholder text for description -->
+                    <p class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+
+
+                    <div class="container my-5 ">
+
+                        <div>
+                            <p class="content-description d-none d-xl-block">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor:
+                                <br><br>
+                                • Lorem dolor sit amet, consectetur adipiscing elit<br>
+                                • Lorem ipsum dolor sit amet, consectetur elit<br>
+                                • Lorem ipsum dolor sit, consectetur adipiscing elit
+                            </p>
+                        </div>
+
+                        <!-- Section 4: Puntos de encuentro -->
+                        <div>
+                            <p class="content-description d-none d-xl-block">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor:
+                                <br><br>
+                                • Lorem dolor sit amet, consectetur adipiscing elit<br>
+                                • Lorem ipsum dolor sit amet, consectetur elit<br>
+                                • Lorem ipsum dolor sit, consectetur adipiscing elit
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="subscription-plan p-3 rounded-4">
+                    <!-- Title -->
+                    <div class="plan-title mb-3">Plan disponible</div>
+
+                    <!-- Basico Card -->
+                    <div class="plan-card mb-3">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <div class="plan-name">Basico</div>
+                                <div class="plan-desc">Desbloquea solo el video seleccionado</div>
+                            </div>
+                            <input type="radio" name="plan" class="form-check-input mt-1" />
+                        </div>
+                        <hr />
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="plan-total">Total $5</div>
+                                <div class="plan-videos text-muted">1 video</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Premium Card -->
+                    <div class="plan-card premium-card position-relative">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="position-relative">
+                                <div class="plan-name">Premium
+                                    <span class="recommended-label">Recomendado</span>
+                                </div>
+                                <div class="plan-desc">Desbloquea la lista completa de videos</div>
+                            </div>
+                            <input type="radio" name="plan" class="form-check-input mt-1" checked />
+                        </div>
+                        <hr />
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="plan-total text-primary">Total $50</div>
+                                <div class="plan-videos text-muted">14 videos</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unlock Button -->
+                    <button class="btn btn-primary w-100 mt-3 rounded-pill">Desbloquear ahora</button>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- 8 images section-->
+        <div class="container" style="margin-bottom: 280px; margin-top: 55px;">
+        </div>
+    </div>
+    <footer class="footer-section position-relative">
+        <!-- newsaltter section -->
+        <div class="container my-5 d-flex justify-content-center inner-container above-the-footer">
+            <div class="container d-flex justify-content-center my-margin-62">
+                <!-- Orange banner -->
+                <div class="orange-section d-flex align-items-center flex-column flex-md-row">
+
+                    <!-- Left image -->
+                    <img src="assets/images/globalMap.png" alt="Global Map" class="map-image" />
+
+                    <!-- Text and button -->
+                    <div class="ms-custom ms-md-custom">
+                        <h2 class="banner-title">
+                            Únete a la comunidad viajera más grande del mundo.
+                        </h2>
+                        <p class="banner-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc, hendrerit euismod quam
+                            enim. Sagittis
+                            tortor, sed. Convallis nunc tellus.
+                        </p>
+                        <button class="btn-register">
+                            Regístrate y Descubre
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-0">
+            <div class="footer-container mx-auto">
+                <div class="row g-0">
+
+                    <!-- 1) Left Column: Logos + Social Icons -->
+                    <!-- Column for Logos + Social Icons -->
+                    <div class="col-auto d-flex flex-column justify-content-start align-items-center">
+                        <!-- Flight Logo (top) -->
+                        <img src="assets/images/tFlight.png" alt="Flight Logo" class="flightfooter-logo mb-2" />
+
+                        <!-- Tour Logo (bottom) -->
+                        <img src="assets/images/tourLogoFooter.png" alt="Tour Logo" class="footer-logo" />
+
+                        <!-- Social Icons (24px margin-top from logos) -->
+                        <div class="d-flex align-items-center mt-3" style="gap: 12px;">
+                            <img src="assets/icons/fb.svg" alt="Facebook" class="social-icon" />
+                            <img src="assets/icons/insta.svg" alt="Instagram" class="social-icon" />
+                            <img src="assets/icons/x.svg" alt="X (Twitter)" class="social-icon" />
+                            <img src="assets/icons/youtube.svg" alt="YouTube" class="social-icon" />
+                        </div>
+                    </div>
+
+
+                    <!-- Spacer to match the 140px margin from the left col to the next col -->
+                    <div class="col-auto" style="width:140px;"></div>
+
+                    <!-- 2) Nuestros Destinos -->
+                    <div class="col-auto footer-col">
+                        <div class="footer-col-title">Nuestros Destinos</div>
+                        <ul class="footer-col-list">
+                            <li>Canadá</li>
+                            <li>Alaska</li>
+                            <li>France</li>
+                            <li>Iceland</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3) Actividades Top -->
+                    <div class="col-auto footer-col">
+                        <div class="footer-col-title">Actividades Top</div>
+                        <ul class="footer-col-list">
+                            <li>Auroras boreales</li>
+                            <li>Crucero y Navegación</li>
+                            <li>Multi-actividades</li>
+                            <li>Kayak</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4) Viajes y Hoteles -->
+                    <div class="col-auto footer-col">
+                        <div class="footer-col-title">Viajes y Hoteles</div>
+                        <ul class="footer-col-list">
+                            <li>Bali Guía de Viaje</li>
+                            <li>Sri Lanka Guía de Viaje</li>
+                            <li>Perú Guía de Viaje</li>
+                            <li>Bali Guía de Viaje</li>
+                        </ul>
+                    </div>
+
+                    <!-- 5) Sobre Nosotros -->
+                    <div class="col-auto footer-col">
+                        <div class="footer-col-title">Sobre Nosotros</div>
+                        <ul class="footer-col-list">
+                            <li>Nuestra Historia</li>
+                            <li>Somos TourMate</li>
+                        </ul>
+                        <!-- Google Play image -->
+                        <img src="assets/images/google.png" alt="Get it on Google Play" class="store-badge mt-2" />
+                    </div>
+
+                    <!-- 6) Contáctanos -->
+                    <div class="col-auto footer-col">
+                        <div class="footer-col-title">Contáctanos</div>
+                        <ul class="footer-col-list">
+                            <li>hello@tourmate.com</li>
+                            <li>Dirección X</li>
+                        </ul>
+                        <!-- Apple Store image -->
+                        <img src="assets/images/apple.png" alt="Download on the App Store" class="store-badge mt-2" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const infoCard = document.getElementById('infoCard');
+        const showSubItemBtn = document.getElementById('showSubItemBtn');
+        const subItemDiff = document.getElementById('subItemDiff');
+        const scheduleBtn = document.getElementById('scheduleBtn');
+        const circleRadio = document.getElementById('circleRadio');
+
+        showSubItemBtn.addEventListener('click', () => {
+            infoCard.classList.add('expanded');       // Expand the card (e.g., from 284px to 700px)
+            subItemDiff.style.display = 'block';        // Show the sub-item section
+            scheduleBtn.style.display = 'block';        // Show the "Agendar ahora" button
+            showSubItemBtn.style.display = 'none';        // Hide the "Ver disponibilidad" button
+        });
+
+        circleRadio.addEventListener('click', () => {
+            circleRadio.classList.toggle('active');     // Toggle the circle fill
+        });
+
+    </script>
+</body>
+
+</html>
